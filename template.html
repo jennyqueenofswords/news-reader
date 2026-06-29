@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The News Reader</title>
+<meta name="description" content="Each day, the news is read and rendered as a card. A daily plotter practice.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#15120E; --ink-soft:#6A6358; --teal:#2A6A7A; --gold:#9C7E0A;
+    --gold-bright:#B8960C; --paper:#FFFFFF; --desk:#E7E4DB; --desk-edge:#D6D1C4;
+    --display:'Fraunces',Georgia,serif;
+    --body:'Newsreader',Georgia,serif;
+    --mono:'IBM Plex Mono',ui-monospace,monospace;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%; scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--desk); color:var(--ink);
+    font-family:var(--body); font-size:18px; line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1140px; margin:0 auto; padding:0 28px}
+
+  /* ── masthead ── */
+  header.mast{padding:64px 0 0}
+  .mast-eyebrow{
+    font-family:var(--mono); font-size:.7rem; letter-spacing:.34em;
+    text-transform:uppercase; color:var(--teal); margin:0 0 18px;
+  }
+  h1.title{
+    font-family:var(--display); font-weight:500;
+    font-size:clamp(2.7rem,8vw,5.4rem); line-height:.92; letter-spacing:-.02em;
+    margin:0; font-optical-sizing:auto;
+  }
+  h1.title em{font-style:italic; font-weight:400; color:var(--teal)}
+  .mast-rule{
+    height:2px; background:var(--gold-bright); margin:26px 0 16px;
+    transform-origin:left; animation:drawrule 1s ease both;
+  }
+  @keyframes drawrule{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+  .mast-meta{
+    display:flex; flex-wrap:wrap; gap:8px 26px; align-items:baseline;
+    font-family:var(--mono); font-size:.74rem; letter-spacing:.12em;
+    text-transform:uppercase; color:var(--ink-soft); padding-bottom:6px;
+  }
+  .mast-meta b{color:var(--ink); font-weight:500}
+  .mast-blurb{
+    font-family:var(--body); font-size:1.15rem; line-height:1.55;
+    max-width:48ch; color:var(--ink); margin:22px 0 0; font-weight:400;
+  }
+  .mast-blurb .lead{font-style:italic; color:var(--teal)}
+
+  /* ── the feed ── */
+  main{padding:50px 0 40px}
+  .feed-label{
+    font-family:var(--mono); font-size:.7rem; letter-spacing:.28em;
+    text-transform:uppercase; color:var(--ink-soft);
+    display:flex; align-items:center; gap:14px; margin:0 0 8px;
+  }
+  .feed-label::after{content:""; flex:1; height:1px; background:var(--desk-edge)}
+
+  .entry{
+    display:grid; grid-template-columns:330px 1fr; gap:50px;
+    align-items:start; padding:60px 0;
+    border-bottom:1px solid var(--desk-edge);
+    opacity:0; transform:translateY(18px);
+    transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1);
+    scroll-margin-top:30px;
+  }
+  .entry.in{opacity:1; transform:none}
+  .entry:last-child{border-bottom:0}
+
+  .entry-art .paper{
+    display:block; background:var(--paper); border-radius:2px;
+    box-shadow:0 1px 1px rgba(21,18,14,.04), 0 14px 30px -16px rgba(21,18,14,.34);
+    overflow:hidden; transition:transform .32s cubic-bezier(.2,.7,.2,1), box-shadow .32s;
+    position:sticky; top:30px;
+  }
+  .entry-art .paper img{display:block; width:100%; height:auto}
+  .entry-art .paper:hover{
+    transform:translateY(-4px);
+    box-shadow:0 2px 2px rgba(21,18,14,.05), 0 26px 46px -18px rgba(21,18,14,.42);
+  }
+  .entry-art .paper:focus-visible{outline:2px solid var(--teal); outline-offset:4px}
+
+  .entry-text{min-width:0; padding-top:6px}
+  .entry-num{
+    font-family:var(--mono); font-size:.74rem; letter-spacing:.18em;
+    text-transform:uppercase; color:var(--gold); margin:0 0 10px;
+  }
+  .entry-num span{color:var(--ink-soft)}
+  .entry-name{
+    font-family:var(--display); font-weight:500;
+    font-size:clamp(2.1rem,4.2vw,3.1rem); line-height:.98; letter-spacing:-.02em; margin:0;
+  }
+  .entry-dateline{
+    font-family:var(--mono); font-size:.72rem; letter-spacing:.1em;
+    text-transform:uppercase; color:var(--ink-soft); margin:14px 0 0;
+  }
+  .entry-keys{display:flex; flex-wrap:wrap; gap:8px; margin:22px 0 0}
+  .entry-keys span{
+    font-family:var(--mono); font-size:.66rem; letter-spacing:.14em;
+    text-transform:uppercase; color:var(--teal);
+    border:1px solid var(--desk-edge); border-radius:2px; padding:5px 9px;
+  }
+  .entry-poem{
+    font-family:var(--body); font-style:italic; font-weight:400;
+    font-size:clamp(1.35rem,2.4vw,1.7rem); line-height:1.32;
+    margin:28px 0 0; color:var(--ink);
+  }
+  .entry-poem span{display:block}
+  .entry-stmt{
+    font-family:var(--body); font-size:1.08rem; line-height:1.72;
+    white-space:pre-line; color:#2C2820; margin-top:28px;
+    max-width:62ch;
+  }
+  .entry-stmt .stmt-label{
+    font-family:var(--mono); font-size:.64rem; letter-spacing:.2em;
+    text-transform:uppercase; color:var(--ink-soft); display:block; margin-bottom:14px;
+  }
+  .entry-noStmt{
+    font-family:var(--mono); font-size:.7rem; letter-spacing:.08em;
+    text-transform:uppercase; color:var(--ink-soft); margin:28px 0 0;
+    padding-top:20px; border-top:1px solid var(--desk-edge); max-width:46ch;
+  }
+
+  footer{
+    border-top:2px solid var(--gold-bright); padding:34px 0 70px; margin-top:30px;
+    font-family:var(--mono); font-size:.72rem; letter-spacing:.1em;
+    text-transform:uppercase; color:var(--ink-soft);
+    display:flex; flex-wrap:wrap; gap:8px 22px; justify-content:space-between;
+  }
+  footer a{color:var(--teal); text-decoration:none}
+  footer a:hover{text-decoration:underline}
+
+  @media (max-width:760px){
+    body{font-size:17px}
+    header.mast{padding-top:44px}
+    .entry{grid-template-columns:1fr; gap:26px; padding:48px 0}
+    .entry-art .paper{position:static; max-width:360px; margin:0 auto}
+    .entry-text{padding-top:0}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none !important; transition:none !important}
+    .entry{opacity:1; transform:none}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="mast">
+    <p class="mast-eyebrow">A daily practice · est. MMXXVI</p>
+    <h1 class="title">The News <em>Reader</em></h1>
+    <div class="mast-rule"></div>
+    <div class="mast-meta">
+      <span>Day <b>__LATEST_NUM__</b></span>
+      <span><b>__COUNT__</b> readings</span>
+      <span><b>__WITH_STMT__</b> with a statement</span>
+    </div>
+    <p class="mast-blurb"><span class="lead">Each day, the news is read and the day is named.</span> One card, drawn by pen plotter — the weight of the day rendered as ink. The reading is the poetry. The card is generated, not chosen.</p>
+  </header>
+
+  <main>
+    <p class="feed-label">The readings — newest first</p>
+    <!--__FEED__-->
+  </main>
+
+  <footer>
+    <span>The News Reader</span>
+    <span>A <a href="https://queenofswords.ai" target="_blank" rel="noopener">Queen of Swords</a> daily practice</span>
+    <span>One card per day · read by Claude</span>
+  </footer>
+</div>
+
+<script>
+// gentle reveal as each reading scrolls into view
+const reduce = matchMedia('(prefers-reduced-motion:reduce)').matches;
+const entries = document.querySelectorAll('.entry');
+if(reduce || !('IntersectionObserver' in window)){
+  entries.forEach(el => el.classList.add('in'));
+} else {
+  const io = new IntersectionObserver((rows, obs) => {
+    rows.forEach(row => {
+      if(row.isIntersecting){ row.target.classList.add('in'); obs.unobserve(row.target); }
+    });
+  }, {rootMargin:'0px 0px -8% 0px'});
+  entries.forEach(el => io.observe(el));
+  // reveal anything already above the fold immediately
+  requestAnimationFrame(() => entries.forEach(el => {
+    if(el.getBoundingClientRect().top < innerHeight) el.classList.add('in');
+  }));
+}
+</script>
+</body>
+</html>
