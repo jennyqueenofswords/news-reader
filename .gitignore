@@ -1,3 +1,8 @@
 .DS_Store
 *.pyc
 __pycache__/
+
+# Secrets — the publisher does `git add -A` to a PUBLIC repo. Keep these out.
+.instagram-token
+*.secret
+INSTAGRAM_SETUP.md
