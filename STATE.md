@@ -6,12 +6,13 @@ journal.)
 
 ---
 
-## Status — as of 2026-06-29
+## Status — as of 2026-07-02
 
-🟢 **Live and self-publishing.** https://jennyqueenofswords.github.io/news-reader/
+🟢 **Live.** https://jennyqueenofswords.github.io/news-reader/ — 70 readings up (46 with a statement, 24 reading-only). Latest: 2026-07-01 · CLXXXII · THE LEDGER.
+
+⚠️ **The nightly auto-push was silently broken 6/30 → 7/1** and is now fixed (see Open threads). The cardpuller kept drawing every night; only the publish step failed, so the site sat frozen on 6/29 for three days. Caught up by hand 7/2. **True verification of the fix is the next nightly run.**
 
 - Public repo: `jennyqueenofswords/news-reader`, GitHub Pages from `main` / root.
-- 67 readings backfilled and up. 43 carry a statement; 24 are reading-only (honest — mostly early-April cards from before the statement practice settled).
 - Nightly: the studio **cardpuller** (9–11pm) pulls the day's card, then `run-studio.sh` runs `publish.sh` to build + push. No human touch required.
 
 ---
@@ -40,11 +41,13 @@ Run by hand anytime: `cd ~/Documents/GitHub/news-reader && ./publish.sh`
 
 ## Open threads
 
-- **Unattended nightly push — unverified.** `publish.sh` works when run from a shell; the unknown is whether the **launchd** studio job can reach the SSH key on its own. First real test: tonight's (6/29) 9–11pm run. Jenny checks in the AM of 6/30. If the card didn't land: suspect SSH-key access from the launchd context (fix: switch the push to gh-over-https credential helper, or load the key for the agent).
+- **Unattended nightly push — was broken, now fixed (verify tonight).** It wasn't the SSH key. `run-studio.sh` invoked `publish.sh` by **exec'ing it directly** (`"$PUBLISH" >> log`). `~/Documents` is a TCC-protected location and the launchd studio context is denied `exec()` on files there — `/bin/bash: …/publish.sh: Operation not permitted` (EPERM), three nights running. It could still *read/write* Documents fine (that's why the cardpuller's card scripts landed). Fix (7/2): call `bash "$PUBLISH"` instead of exec'ing — bash reads the script as input, no exec check. Verified as a clean no-op from an interactive shell, but that shell has Full Disk Access, so **the real test is the next 9–11pm launchd run.** If it still fails: the launchd job may also lack read access under TCC — grant the studio's launchd program Full Disk Access, or move publish.sh out of ~/Documents.
 - **Wonder:** should reading-only days eventually get a quieter treatment, or is the plain "no statement was written" line right? Leaving it as-is until it bothers someone.
+- **Wonder:** the publish failed silently for three days — nobody noticed until Jenny asked. Worth a cheap alarm? (e.g. the daybreak shape flags it if the site's latest card is >1 day behind today.)
 
 ---
 
 ## Log
 
+- **2026-07-02** — Found the nightly auto-push had been failing silently since 6/29 (site frozen three days while the cardpuller kept drawing). Root cause: `run-studio.sh` exec'd `publish.sh` directly from TCC-protected `~/Documents` → EPERM in the launchd context. Fixed by switching to `bash "$PUBLISH"`. Caught the site up by hand: 6/29, 6/30, 7/1 all published (70 cards total). Real verification pending tonight's run.
 - **2026-06-29** — Built the whole thing. Backfilled 67 cards, designed the site, recovered 6 statements hiding below imports, cleaned title/image-description cruft, wired auto-publish, created the public repo, enabled Pages, went live. Statement now required in both card generators.
