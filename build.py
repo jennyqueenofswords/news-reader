@@ -167,13 +167,27 @@ def e(s):
 def title_case(s):
     return (s or '').title()
 
+def statement_html(text):
+    """Render a statement as real paragraphs.
+
+    Statements arrive wrapped at roughly 76 columns, so most newlines are an
+    artefact of typing rather than intent. A *blank* line is a real paragraph
+    break. Join the former, honour the latter, and the prose reflows to whatever
+    width it is given instead of keeping someone else's line endings.
+    """
+    paras = []
+    for block in re.split(r'\n\s*\n', text or ''):
+        joined = ' '.join(block.split())
+        if joined:
+            paras.append(f'<p>{e(joined)}</p>')
+    return ''.join(paras)
+
 def render_entry(r):
     keys = ''.join(f'<span>{e(k)}</span>'
                    for k in (r['keywords'] or '').split() if k)
     keys_html = f'<div class="entry-keys">{keys}</div>' if keys else ''
     if r['statement']:
-        body = (f'<div class="entry-stmt"><span class="stmt-label">The statement</span>'
-                f'{e(r["statement"])}</div>')
+        body = f'<div class="entry-stmt">{statement_html(r["statement"])}</div>'
     else:
         body = ('<p class="entry-noStmt">No statement was written this day — '
                 'only the reading.</p>')
@@ -184,11 +198,8 @@ def render_entry(r):
     </a>
   </div>
   <div class="entry-text">
-    <p class="entry-num">{e(r['number'])} <span>· day of the year</span></p>
-    <h2 class="entry-name">{e(title_case(r['name']))}</h2>
-    <p class="entry-dateline">{e(r['weekday'])} · {e(r['date_long'])} · {e(r['date_roman'])}</p>
+    <h2 class="entry-dateline">{e(r['name'].upper())} <span>· {e(r['weekday'])} · {e(r['date_long'])}</span></h2>
     {keys_html}
-    <p class="entry-poem"><span>{e(r['reading_1'])}</span><span>{e(r['reading_2'])}</span></p>
     {body}
   </div>
 </article>'''
@@ -196,12 +207,9 @@ def render_entry(r):
 def render(records):
     count = len(records)
     latest = records[0] if records else None
-    with_stmt = sum(1 for r in records if r['statement'])
     feed = '\n'.join(render_entry(r) for r in records)
     page = TEMPLATE.replace('<!--__FEED__-->', feed)
     page = page.replace('__COUNT__', str(count))
-    page = page.replace('__WITH_STMT__', str(with_stmt))
-    page = page.replace('__LATEST_NUM__', e(latest['number']) if latest else '')
     with open(os.path.join(HERE, 'index.html'), 'w', encoding='utf-8') as f:
         f.write(page)
     # GitHub Pages: serve as-is, don't run Jekyll over it
