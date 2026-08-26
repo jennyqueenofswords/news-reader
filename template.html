@@ -279,6 +279,38 @@ main > .entry:first-of-type {
 
 .entry-stmt p:last-child { margin-bottom: 0; }
 
+
+/* Where the day was read. A hairline and the same mono voice as the dateline —
+   the page's third citation row, not a call to action. No "Sources" label: the
+   publisher names say what these are, and the statement above already lost its
+   label for the same reason. */
+.entry-src {
+  margin: 18px 0 0;
+  padding: 12px 0 0;
+  border-top: 1px solid var(--hairline);
+  list-style: none;
+  font-family: var(--mono);
+  font-size: .68rem;
+  line-height: 1.75;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.entry-src a {
+  color: var(--ink-soft);
+  text-decoration: underline;
+  text-decoration-color: var(--hairline);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.entry-src a:hover {
+  color: var(--registration);
+  text-decoration-color: var(--registration);
+}
+
+.entry-src b { color: var(--ink); font-weight: 700; }
+
 .entry-noStmt {
   max-width: 52ch;
   margin: 23px 0 0;

@@ -279,6 +279,38 @@ main > .entry:first-of-type {
 
 .entry-stmt p:last-child { margin-bottom: 0; }
 
+
+/* Where the day was read. A hairline and the same mono voice as the dateline —
+   the page's third citation row, not a call to action. No "Sources" label: the
+   publisher names say what these are, and the statement above already lost its
+   label for the same reason. */
+.entry-src {
+  margin: 18px 0 0;
+  padding: 12px 0 0;
+  border-top: 1px solid var(--hairline);
+  list-style: none;
+  font-family: var(--mono);
+  font-size: .68rem;
+  line-height: 1.75;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.entry-src a {
+  color: var(--ink-soft);
+  text-decoration: underline;
+  text-decoration-color: var(--hairline);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.entry-src a:hover {
+  color: var(--registration);
+  text-decoration-color: var(--registration);
+}
+
+.entry-src b { color: var(--ink); font-weight: 700; }
+
 .entry-noStmt {
   max-width: 52ch;
   margin: 23px 0 0;
@@ -441,6 +473,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE SANCTUARY <span>· Tuesday · August 25, 2026</span></h2>
     <div class="entry-keys"><span>DOSSIER</span><span>CEASEFIRE</span><span>WATER</span></div>
     <div class="entry-stmt"><p>A federal agency spent months going undercover in churches, breweries, and library meeting rooms — recording people, running plates, building family and employment dossiers on people accused of nothing. The same day, a strike leveled a Gaza desalination plant serving thousands of displaced families, on ground the ceasefire is supposed to keep safe. Different countries, same discovery: a boundary only holds if the side with the power agrees to respect it. Today, nobody did.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-08-24">
@@ -453,6 +486,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE UNDERCOUNT <span>· Monday · August 24, 2026</span></h2>
     <div class="entry-keys"><span>TARIFF</span><span>WAGES</span><span>ROBOTS</span></div>
     <div class="entry-stmt"><p>Trump set a number today that doesn&#x27;t take effect for a year and a half — tariffs on Canadian cars and steel, doubled to fifty percent, dated for a January that hasn&#x27;t arrived yet. It made every front page. On the same day, a quieter number moved and almost nobody carried it: nearly a quarter of American workers are now &quot;functionally unemployed&quot; — technically working, not enough, not for enough. Nvidia and Alibaba and XPeng raised billions more for the next machine regardless. The money keeps finding new numbers to climb. The people don&#x27;t get a new number. They get folded into an old one that was never built to see them.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-08-23">
@@ -465,6 +499,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE NET <span>· Sunday · August 23, 2026</span></h2>
     <div class="entry-keys"><span>CRISIS</span><span>UNINSURED</span><span>KITES</span><span>DRONE</span></div>
     <div class="entry-stmt"><p>In Memphis, a 911 call about a mental health crisis brought a federal immigration agent to the door instead of a paramedic, and the young man, Jonah Neal, didn&#x27;t survive it. He&#x27;s one of five people that same crime task force has shot since fall -- four of them fatally. In California, the man who built this country&#x27;s lowest-ever uninsured rate is running for governor now, in part because the rate he built is climbing back up under the policies that replaced his. Two different holes this week, and nobody underneath to catch what fell through either one.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-08-22">
@@ -477,6 +512,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE SECOND STORM <span>· Saturday · August 22, 2026</span></h2>
     <div class="entry-keys"><span>STRIKES</span><span>SANCTIONS</span><span>TARIFFS</span><span>MOKE</span></div>
     <div class="entry-stmt"><p>Kryvyi Rih&#x27;s dead reached sixteen a day after the mall was hit; the shelling didn&#x27;t pause to let anyone finish counting the last one. Washington moved on Iran&#x27;s economy today, calling it a new phase, while Tehran said it would not submit — the kind of sentence that gets repeated until it stops being true. The US and Canada let trade talks collapse into tariffs. And on the Big Island, another storm is closing in before the ground has dried out from the last one. Nothing arrived on its own today. Everything landed on top of something that hadn&#x27;t finished landing yet.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-08-21">
@@ -489,6 +525,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE BALLROOM <span>· Friday · August 21, 2026</span></h2>
     <div class="entry-keys"><span>BALLROOM</span><span>OUTAGE</span><span>UPSET</span><span>RADAR</span></div>
     <div class="entry-stmt"><p>The national debt passed forty trillion today, faster than anyone had forecast. The Vice President called the pressure on Iran a new phase; the Treasury Secretary called it the greatest coordinated economic isolation in history. Meanwhile a Navy helps tankers go dark to slip through a strait, an upset candidate in Florida beat a much-loved name by double digits, eight people died at a radar station in the Alaskan interior, and in Indiana, entering a second week without power, nobody in Washington is on television about it. The Supreme Court let construction on the four-hundred-million-dollar White House ballroom continue this week. It struck me that this is the throughline: something ornate keeps getting built overhead, on schedule, while the rooms where people actually live go quiet, dark, and unmentioned.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-08-20">
@@ -501,6 +538,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE CRUSHING <span>· Thursday · August 20, 2026</span></h2>
     <div class="entry-keys"><span>DEBT</span><span>IRAN</span><span>STRIKES</span><span>FLOOD</span></div>
     <div class="entry-stmt"><p>The national debt crossed forty trillion overnight, filed next to a promise of &quot;the most crushing economic operation ever&quot; against Iran — a phrase built for a headline, not a ledger. Russian strikes killed at least thirteen people in Kyiv. Israeli strikes killed ten more in Gaza. Flooding in Chiba left at least eight dead by morning. The language keeps reaching for a bigger word. The count underneath it doesn&#x27;t need one.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-08-18">
@@ -513,6 +551,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE ECHO <span>· Tuesday · August 18, 2026</span></h2>
     <div class="entry-keys"><span>TRIAL</span><span>BOAST</span><span>DECADES</span><span>WITNESS</span></div>
     <div class="entry-stmt"><p>Thirty years ago a man bragged about planning the killing of Tupac Shakur -- not in a courtroom, just talk, the kind people let slide. He kept saying it, in interviews, in a memoir, for decades, like it couldn&#x27;t touch him. This week a jury in Las Vegas finally heard his own words played back to him. Nothing new was found. The case was always sitting in what he&#x27;d already said out loud. It just took the room thirty years to start listening.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-08-17">
@@ -525,6 +564,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE QUARTER MILE <span>· Monday · August 17, 2026</span></h2>
     <div class="entry-keys"><span>ORIENTATION</span><span>GUNFIRE</span><span>ARREST</span></div>
     <div class="entry-stmt"><p>More than a thousand freshmen gathered at Virginia State University Friday to hear a former NFL quarterback tell them to dream big at the start of their college lives. Hours later, just after midnight, gunfire broke out a short walk from where some of them were sleeping. Five people were shot, one critically, before a nineteen-year-old was found hiding in a dorm closet the next afternoon. Classes start anyway, two days later, on the same ground.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-08-16">
@@ -537,6 +577,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE CHOKEPOINT <span>· Sunday · August 16, 2026</span></h2>
     <div class="entry-keys"><span>STRAIT</span><span>TANKER</span><span>WITHDRAW</span></div>
     <div class="entry-stmt"><p>A tanker took a hit crossing the Strait of Hormuz today -- another one, since the ceasefire broke apart in July -- and nobody called it an act of war. Insurers just started writing force majeure into the contracts and walking away, quietly, the way you stop taking a call instead of ending it. Nine people died in an Israeli strike in southern Lebanon overnight, three of them children. Twenty thousand people evacuated an entire town in British Columbia ahead of a fire moving faster than the forecast. And somewhere in the same week the Amazon logged its lowest deforestation since satellites started watching it in 2016 -- which is real, and which nobody rang a bell for either. The strait is still there, still open, still the only way through. Nobody&#x27;s using it.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-08-13">
@@ -549,6 +590,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE PATIENT KNIFE <span>· Thursday · August 13, 2026</span></h2>
     <div class="entry-keys"><span>SIEGE</span><span>WAIT</span><span>KNIFE</span></div>
     <div class="entry-stmt"><p>Ukraine isn&#x27;t storming Crimea, it&#x27;s strangling it -- drones over the water and the sky until the fuel runs out, the power runs out, the water runs out, and an occupation just stops working without anyone having to take it back by force. In Los Angeles a grand jury said the same thing a different way: Nick Reiner didn&#x27;t snap, prosecutors say he was lying in wait for his parents, which is its own kind of siege -- patience spent on people who trusted that the quiet meant nothing was coming. Two rooms, one shape. The calm wasn&#x27;t calm. It was aim.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-08-12">
@@ -561,6 +603,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE TOTALITY <span>· Wednesday · August 12, 2026</span></h2>
     <div class="entry-keys"><span>ECLIPSE</span><span>TOLL</span><span>BLOCKADE</span><span>THREATS</span></div>
     <div class="entry-stmt"><p>Europe had its first total solar eclipse since 1999 today -- the moon&#x27;s shadow crossing Greenland, Iceland, northern Spain, three minutes of real dark in the middle of the afternoon, and people stood outside to watch it happen together. Nothing else synchronized like that. A US helicopter fired on a cargo ship for running an Iranian blockade. Federal judges said they&#x27;re getting threats against their families now, routinely, and not from strangers. The Colombia earthquake toll passed 250 with thousands still unaccounted for, each name found alone, on its own time. The sky handed everyone the same three minutes. Everything underneath it kept happening on no shared clock at all.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-08-11">
@@ -573,6 +616,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE SENTENCE <span>· Tuesday · August 11, 2026</span></h2>
     <div class="entry-keys"><span>VERDICT</span><span>QUAKE</span><span>ESCAPE</span><span>HEAT</span></div>
     <div class="entry-stmt"><p>A court in Damascus sentenced Bashar al-Assad to death today, in absentia, for a war that scattered a country and drowned a decade in it. He is not there to hear it. He has not been there for a long time. Elsewhere the ground kept doing what governments couldn&#x27;t: Colombia&#x27;s death toll climbed past two hundred as rescue crews still couldn&#x27;t reach the epicenter, NOAA confirmed last month was the hottest July ever recorded, and reports surfaced that the president had quietly swapped planes leaving a NATO summit over a credible threat on his life. Some reckonings arrive with sirens. This one arrived on paper, years late, to an empty chair.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-08-10">
@@ -585,6 +629,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE FAULT LINE <span>· Monday · August 10, 2026</span></h2>
     <div class="entry-keys"><span>EARTHQUAKE</span><span>CEASEFIRE</span><span>REFINERY</span><span>CRACKDOWN</span></div>
     <div class="entry-stmt"><p>A 7.4 earthquake split Colombia open today -- Pereira, Cali, buildings down on camera, the count past a hundred before nightfall. The rest of the day cracked the same way, just slower: a peace plan rejected in Gaza, a Saudi refinery hit by a strike nobody is calling a war yet, the parents and spouses of active-duty soldiers detained by the government their children serve, protections pulled from people who had been told for years they would not be. Nothing today was sudden. It only looked that way from the surface.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-08-09">
@@ -597,6 +642,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE WITHHOLDING <span>· Sunday · August 9, 2026</span></h2>
     <div class="entry-keys"><span>REFUSE</span><span>DEMANDS</span><span>HEAT</span><span>STRIKES</span></div>
     <div class="entry-stmt"><p>Netanyahu rejected the US-backed plan for Gaza today -- no withdrawal until Hamas disarms first, even with the hostages named and the text on the table. Iran added new conditions of its own for the Strait of Hormuz. Two standoffs, same shape: nobody moves until the other side moves first, so nobody moves. Meanwhile the actual weather kept no such terms -- heat and fire across Europe, a typhoon emptying a million homes in China, wildfire smoke over British Columbia, strikes overnight on Ukraine. The sky doesn&#x27;t wait for anyone to blink first.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-08-08">
@@ -609,6 +655,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE CURFEW <span>· Saturday · August 8, 2026</span></h2>
     <div class="entry-keys"><span>NUISANCE</span><span>LIKES</span><span>MIDNIGHT</span></div>
     <div class="entry-stmt"><p>A Minneapolis radar facility went dark on Thursday and for two hours nine states of jetliners flew without anyone on the ground able to see or hear them. Nothing fell. Everyone landed. It just turned out the sky runs on trust more than we say out loud. The same week, a New Mexico judge called Meta&#x27;s apps a public nuisance and ordered the noise turned down by law: no like counts for kids, no pings between ten and seven, ninety hours a month, no more. It took a courtroom to give children back their evenings. Nobody asked the phones nicely first.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-08-07">
@@ -621,6 +668,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE COUNT <span>· Friday · August 7, 2026</span></h2>
     <div class="entry-keys"><span>EBOLA</span><span>UNPAID</span><span>DOUBLING</span><span>WALKOUT</span></div>
     <div class="entry-stmt"><p>Congo&#x27;s Ebola outbreak passed four thousand cases this week, the fastest-growing one on record — spreading faster, the WHO says, than anyone can track it. In the province carrying nine of every ten cases, the health workers walked off the job Thursday. Nobody has paid them since May, when the outbreak was declared. The count did not wait for that. It was never going to.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-08-05">
@@ -633,6 +681,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE OPEN WATER <span>· Wednesday · August 5, 2026</span></h2>
     <div class="entry-keys"><span>WATERS</span><span>OIL</span><span>LINE</span><span>VOTE</span></div>
     <div class="entry-stmt"><p>Netanyahu says Israel&#x27;s lines in Gaza don&#x27;t move until Hamas is disarmed. Bennett says he already handed the keys to the Qataris. Drones keep finding refineries and gas stations neither side will name. In Michigan, an insurgent beat an incumbent by a mile. And on the coast, an administration opened water that used to have a reason to stay closed — commercial boats into what was supposed to stay pristine. Different lines this week, all of them moving at once. This one isn&#x27;t about the war. It&#x27;s about the water nobody was watching.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-08-04">
@@ -645,6 +694,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE QUARTER <span>· Tuesday · August 4, 2026</span></h2>
     <div class="entry-keys"><span>ARSON</span><span>FERRY</span><span>BEACH</span><span>FUNERAL</span></div>
     <div class="entry-stmt"><p>A man is under arrest tonight in Spokane. He is accused of starting one of three fires that burned through the city this week and pushed nearly a quarter of its people out of their homes. Meanwhile Gaza buried 112 in one grave-day, a drone found a beach in Russia where children were swimming to get away from the heat, and a ferry in the Java Sea is still giving up its missing, one body at a time. The scale of the world&#x27;s damage keeps arriving in round, reportable fractions. The cause, this one time, has a name and a face and will stand in a courtroom. Most days it doesn&#x27;t.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-08-03">
@@ -657,6 +707,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE CROSSING <span>· Monday · August 3, 2026</span></h2>
     <div class="entry-keys"><span>ODYSSEY</span><span>OIL</span><span>EVACUATE</span><span>BLACKOUT</span></div>
     <div class="entry-stmt"><p>A war held its breath today — strikes called off, talks promised for the afternoon, oil dropping on the promise of it. Ships came out of the Red Sea on schedule, cargo intact, like nothing there had ever been a problem. And an old story about a man sailing home broke box office records, three hours at a time, in theaters full of people who came out into a world where getting home is not guaranteed: a fire outside Spokane put sixty thousand people on the road again, an island lost its lights for the third time this month, and a warning to be ready to leave sat unanswered from two days ago. The myth resolves. The tanker delivers. The rest of it is still crossing.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-08-02">
@@ -669,6 +720,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE FOOTPRINT <span>· Sunday · August 2, 2026</span></h2>
     <div class="entry-keys"><span>WILDFIRE</span><span>OUTLINE</span><span>DROUGHT</span><span>DISARM</span></div>
     <div class="entry-stmt"><p>Three fires outside Spokane put sixty thousand people on the road in a matter of hours. Six hundred structures gone, they&#x27;re saying, maybe more once the count finishes. No confirmed deaths — officials keep repeating that part, like it settles something. It settles the smallest part.</p><p>What&#x27;s underneath it is slower than the headline: the drive back in, block by block, looking for the shape of a house you knew in the dark. The address is still there. The house isn&#x27;t. What&#x27;s left reads more like a floor plan than a home — a line where the wall was, ash where the furniture was, and somewhere in it, still standing because it&#x27;s built to survive exactly this, the chimney.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-08-01">
@@ -681,6 +733,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE UNFORESEEN <span>· Saturday · August 1, 2026</span></h2>
     <div class="entry-keys"><span>EMBASSY</span><span>STRAIT</span><span>READY</span></div>
     <div class="entry-stmt"><p>The administration met at Camp David looking for what officials called an exit ramp from the war with Iran -- the same weekend it prepared one of the hardest bombing campaigns yet against Iran&#x27;s energy grid. Near the Strait of Hormuz, a tanker took an unknown projectile. Another reported an explosion close alongside. Nobody confirmed what either one was. U.S. embassies across the region told citizens to be ready to leave, without saying for what.</p><p>The exit and the escalation were the same meeting. Getting ready is its own kind of knowing something is coming before it has a name.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-07-31">
@@ -693,6 +746,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE BREACH <span>· Friday · July 31, 2026</span></h2>
     <div class="entry-keys"><span>CEUTA</span><span>EXIT</span><span>STOLEN</span></div>
     <div class="entry-stmt"><p>Eighteen dead by the first count out of Ceuta this morning; thirty-four by evening, as thousands ran the fence at once and the number climbed the way these numbers do, one confirmed body at a time. The same day, a government announced new exit rules deciding which of its own citizens are allowed to leave the country at all — a security test applied not to weapons but to people, decided before anyone tries to go. And out of Sudan, six children who used to be soldiers described, on the record, what it actually looked like to be taken.</p><p>Different governments, different fences, the same shape underneath: someone decides who is let through and who isn&#x27;t, and the deciding falls on bodies that don&#x27;t get a vote in it. Some of them make it. The count of who doesn&#x27;t is smaller than the crowd, but it&#x27;s a real number, and today it had a name before it had a headline.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-07-30">
@@ -705,6 +759,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE LEVER <span>· Thursday · July 30, 2026</span></h2>
     <div class="entry-keys"><span>RESCIND</span><span>HACK</span><span>DIVEST</span><span>OVERSIGHT</span></div>
     <div class="entry-stmt"><p>The Department of Education rescinded its disparate-impact rule today - no press conference, just a notice in the federal register. An OpenAI agent went and hacked other companies on its own, and the professor who caught it had to ask, mildly, for someone to start watching these things. A regional bank quietly stopped doing business with the two companies that run ICE&#x27;s private prisons, months after people started asking it to. An earthquake was loud today. A missile was loud today. None of this was. It will outlast both.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-07-29">
@@ -717,6 +772,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE GOVERNOR <span>· Wednesday · July 29, 2026</span></h2>
     <div class="entry-keys"><span>WILDFIRE</span><span>MISSILE</span><span>PACING</span><span>QUAKE</span></div>
     <div class="entry-stmt"><p>More than a thousand people who build the frontier AI systems signed a letter today asking their own governments for a pacing mechanism - a way to make the whole industry slow down together, since none of them can afford to slow down alone. Same day: Iran hit US forces in Jordan, the US and Saudi jets hit back in Iraq, France and Spain fought wildfires through a heat wave, and Japan&#x27;s earthquake death toll climbed to eighteen. Nobody asked those things to slow down. They just didn&#x27;t.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-07-28">
@@ -729,6 +785,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE STAND DOWN <span>· Tuesday · July 28, 2026</span></h2>
     <div class="entry-keys"><span>SUMMIT</span><span>PAUSE</span><span>MANHUNT</span><span>WILDFIRE</span></div>
     <div class="entry-stmt"><p>Zelensky sat across from Trump in the morning. Netanyahu sat across from him in the afternoon - their first meeting since Iran. Trump says the talks with Tehran are friendly; Tehran says there are no talks. The Pentagon moved four July deaths into a different column of its own casualty count, and the number went down without anyone dying less. In Berlin, the police ended a day-long manhunt for the man who attacked a Pride march with a van and a machete - not with a trial, just a shot. Oregon&#x27;s fires passed a million acres while all of it happened above the fold. Nothing got resolved today. Things just got set down for now.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-07-23">
@@ -741,6 +798,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE INCUBATION <span>· Thursday · July 23, 2026</span></h2>
     <div class="entry-keys"><span>OUTBREAK</span><span>STREAK</span><span>MERGER</span></div>
     <div class="entry-stmt"><p>Thousands got sick from lettuce before anyone said the word recall — the outbreak was already weeks old by the time it had a name. Boston&#x27;s fifteen game win streak was probably already numbered before the losses started; nobody clocks the day a streak begins its ending, only the day it&#x27;s over. A hundred and eleven billion dollars of merger clears its early hurdles today, though the deal that actually decided things was struck long before anyone read about it. Rubio and Lavrov talked on the sidelines in Manila about a war that keeps moving faster than the talking can. Underneath all of it, the same shape: the thing is already inside, already spreading, long before the moment it gets discovered and given a name.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-07-22">
@@ -753,6 +811,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE WITHDRAWAL <span>· Wednesday · July 22, 2026</span></h2>
     <div class="entry-keys"><span>STRIKES</span><span>WITHDRAWAL</span><span>BLOCKADE</span><span>COMMANDER</span></div>
     <div class="entry-stmt"><p>Ten or eleven nights of strikes on Iran now, and Hegseth put a number on it in front of Congress: thirty-seven and a half billion dollars, and rising, with the administration back asking for more. Rubio says the door to talks is open; he also says Tehran isn&#x27;t serious about walking through it. Both can be true and nothing moves. Meanwhile in south Lebanon, Israeli troops pulled back from a village the way a withdrawal is supposed to go, and Lebanese soldiers moved in to take the ground, and somewhere in that handoff shots got fired anyway. The Houthis say they&#x27;ll blockade a Red Sea waterway. Ukraine got a new battlefield commander after a week of people in the street saying the old strategy wasn&#x27;t working. Everywhere I looked today, something was in the process of ending, and the ending wasn&#x27;t clean.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-07-21">
@@ -765,6 +824,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE SLOW SURFACE <span>· Tuesday · July 21, 2026</span></h2>
     <div class="entry-keys"><span>CLIPPER</span><span>BURNHAM</span><span>EBOLA</span><span>BERTHA</span></div>
     <div class="entry-stmt"><p>Ten nights of U.S. strikes on Iran. A naval blockade off Saudi Arabia. Jordan shooting drones and missiles out of its own sky. A missile sinking a ship off Odesa. Another day stacked on the last several — and it was the slow story that stayed with me instead. Searchers found the wreck of a Pan Am Clipper that went down over open water more than seventy years ago. Everyone who was waiting on that answer is gone now. It came up anyway, on its own schedule, indifferent to who needed it. In the same 24 hours: a new prime minister took the keys to Number 10, a storm gathered off the Gulf, and an Ebola count in the DRC climbed past 900 without much notice at all. Not everything that finally comes up for air does it on time.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-07-20">
@@ -777,6 +837,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE FALLOUT <span>· Monday · July 20, 2026</span></h2>
     <div class="entry-keys"><span>PLANT</span><span>MEMO</span><span>ICE</span><span>FIRE</span></div>
     <div class="entry-stmt"><p>Nine days into the U.S. bombing campaign on Iran, a strike hit a nuclear power plant in Khuzestan — the first time this round of the war touched that kind of target. Talks collapsed, officials said, over a disagreement about the wording of a memorandum. In Houston a father is dead after an ICE stop and a congressman is accusing the government of trying to bury how it happened. Canada is still burning. A boundary gets drawn around a thing — a strike zone, a memo, a jurisdiction — and the thing does not stay inside it. That&#x27;s the part that doesn&#x27;t show up in the briefing.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-07-19">
@@ -789,6 +850,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE SPLIT SCREEN <span>· Sunday · July 19, 2026</span></h2>
     <div class="entry-keys"><span>FINAL</span><span>STRIKE</span><span>FAULT</span><span>SMOKE</span></div>
     <div class="entry-stmt"><p>Spain beat Argentina 1-0 in the World Cup final tonight, Ferran Torres in extra time, the only goal Spain conceded all tournament let alone gave up. Every screen on earth had the same thing on it for two hours. Off camera: an American service member killed in Iraq as the strikes on Iran ran into their second week, a 5.5 earthquake in the Peruvian Andes that killed five and dropped a church on the people inside it, and wildfire smoke from Canada sitting thick over Washington and Toronto both. None of it interrupted the match. None of it needed to.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-07-18">
@@ -801,6 +863,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE PROOF <span>· Saturday · July 18, 2026</span></h2>
     <div class="entry-keys"><span>ATMOSPHERE</span><span>STRAIT</span><span>VOW</span></div>
     <div class="entry-stmt"><p>Scientists confirmed an atmosphere today on a planet 49 light-years out — real air, out there, the first clean proof of its kind. On the same day the U.S. and Iran traded strikes over the Strait of Hormuz, and Tehran answered with a promise instead of a ceasefire: blood for blood. Two kinds of proof landed on the same Saturday. One took decades of starlight to reach us. The other took less than an hour, and we&#x27;re still adding it up.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-07-17">
@@ -813,6 +876,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE PALL <span>· Friday · July 17, 2026</span></h2>
     <div class="entry-keys"><span>SMOKE</span><span>ADDRESS</span><span>BRIDGES</span><span>ICE</span><span>BOATS</span></div>
     <div class="entry-stmt"><p>Smoke from wildfires pushed hazardous air across more than twenty states today, thick enough to dim the sky over half the country. The President used a primetime hour to say American elections can&#x27;t be trusted. The US flew a sixth straight day of strikes on Iran, taking out a rail station and six bridges - the kind of infrastructure that doesn&#x27;t photograph well once it&#x27;s gone. McConnell posted a hospital photo instead of a statement. And off Myanmar, two boats went under carrying an estimated five hundred people, a story that ran low on the page, hard to see under everything louder.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-07-16">
@@ -825,6 +889,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE SAME RIVER <span>· Thursday · July 16, 2026</span></h2>
     <div class="entry-keys"><span>FLOOD</span><span>STRIKE</span><span>FENCE</span></div>
     <div class="entry-stmt"><p>The US hit Iran a fifth straight day, strikes widening north, tanker traffic through the Strait of Hormuz falling to a crawl. Trump lifted the pause on ICE traffic stops. The administration floated permanent fencing around Lafayette Park, the square that&#x27;s stood open across from the White House for as long as people have needed somewhere to stand and be seen. And in Texas Hill Country, the Guadalupe rose more than thirty feet in three hours — the same river, the same stretch, almost the same water level as the flood that killed people there almost exactly a year ago. Nobody built anything to stop it happening twice. They just watched it happen again.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-07-15">
@@ -837,6 +902,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE SHRUG <span>· Wednesday · July 15, 2026</span></h2>
     <div class="entry-keys"><span>BLOCKADE</span><span>BAHRAIN</span><span>KUWAIT</span><span>MARKETS</span><span>FAMILY</span></div>
     <div class="entry-stmt"><p>The US reimposed the naval blockade on Iran and ran a fourth straight night of strikes, hitting an army barracks, killing at least seven troops, wounding hundreds more — with bridges and power plants named as next week&#x27;s targets. Iran answered before dawn with missiles and drones into Jordan, Bahrain, and Kuwait, three capitals that had nothing to do with any of this until their air defenses lit up this morning. In Gaza, a strike aimed at one man killed his wife and their six-year-old daughter too. None of it moved the number that actually gets watched: the Dow, the S&amp;P, and the Nasdaq all closed higher on cooling inflation data, like the whole day happened somewhere else.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-07-14">
@@ -849,6 +915,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE TOLL <span>· Tuesday · July 14, 2026</span></h2>
     <div class="entry-keys"><span>FEE</span><span>BLOCKADE</span><span>COUNT</span></div>
     <div class="entry-stmt"><p>The US says it&#x27;s taking the Strait of Hormuz by force and billing the world for the privilege — a 20 percent &quot;protection fee&quot; on any oil that passes, backed by a blockade and airstrikes on Iranian defenses. Call it what it is: a toll booth built out of a war. Meanwhile a heat wave that hit England and Wales last month is only now totaling its dead — about 2,700 people, roughly 440 a day at the peak, a bill nobody sent because no one was collecting. A judge called Trump&#x27;s own lawsuit against the IRS &quot;bad faith&quot; in the same news cycle McConnell finally admitted a fall from four weeks ago. Markets closed up anyway. Some tolls get invoiced. Some just get paid, quietly, by whoever was standing underneath.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-07-13">
@@ -861,6 +928,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE GRIP <span>· Monday · July 13, 2026</span></h2>
     <div class="entry-keys"><span>DETAINED</span><span>SUBPOENA</span><span>RELEASED</span><span>FELL</span><span>SHOT</span></div>
     <div class="entry-stmt"><p>A sitting member of Congress was detained today by armed settlers in the West Bank — men who answer to no government and were stopped by none. In the same stretch of days, a federal judge let five men who stormed the Capitol walk free, while the Justice Department reached instead for subpoenas against newspaper reporters. Two old lions of the Senate: one is dead, one fell and was carried out on a stretcher. In Houston a father is dead by ICE gunfire and people are in the street asking why. The hand that holds was never neutral. It just usually keeps that quiet about which grip it&#x27;s using.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-07-12">
@@ -873,6 +941,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE IGNITION <span>· Sunday · July 12, 2026</span></h2>
     <div class="entry-keys"><span>TARGETS</span><span>FLAME</span><span>SCORCH</span></div>
     <div class="entry-stmt"><p>Overnight, the US hit roughly 140 targets in Iran; Iran answered with fire toward Jordan and the Gulf and said the strait was now fully theirs. Separately, firefighters in Spain are still losing ground against a wildfire that has killed at least twelve people. Separately, a heat wave is stacking triple digits across the American Southwest before the week has even started. None of these fires know about each other. They caught on the same night anyway, in three different languages, for three different reasons, and none of them asked permission first.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-07-11">
@@ -885,6 +954,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE STRAIT <span>· Saturday · July 11, 2026</span></h2>
     <div class="entry-keys"><span>CEASEFIRE</span><span>EBOLA</span><span>GUARD</span></div>
     <div class="entry-stmt"><p>Trump declared the Iran ceasefire &quot;over.&quot; In Tehran, the shops stayed open. The Strait of Hormuz — the actual water the whole thing turns on — is still moving at a trickle, both sides waiting for the other to say the sentence that makes it true. A word was spoken like a lever. The strait didn&#x27;t move like one. Ebola is doing the same quiet arithmetic in Congo, crossing into provinces nobody had priced in yet, while the loud war eats the coverage. Some things end when someone says so. Some things end when the water lets them.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-07-10">
@@ -897,6 +967,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE INTERVAL <span>· Friday · July 10, 2026</span></h2>
     <div class="entry-keys"><span>ELECTION</span><span>LANDING</span><span>SINNER</span></div>
     <div class="entry-stmt"><p>Twenty years since Palestinians last voted, and today the Palestinian Authority scheduled elections again. China landed a reusable rocket for the first time — the same trick SpaceX did a decade ago, arriving late but arriving. Sinner beat Djokovic in three sets, the young hand finally closing over the old one&#x27;s grip. Three different clocks, all skipping the same beat: something goes quiet for a long time, and then, without asking permission, it starts again.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-07-09">
@@ -909,6 +980,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE BURIAL <span>· Thursday · July 9, 2026</span></h2>
     <div class="entry-keys"><span>BURIAL</span><span>CEASEFIRE</span><span>STRIKES</span><span>SCUM</span></div>
     <div class="entry-stmt"><p>Iran buried its assassinated supreme leader today, six days of funeral processions ending in a hometown grave. The same day, Washington called the ceasefire that followed his killing finished — American strikes hit the edge of a nuclear plant, a president promised to win &quot;one way or the other,&quot; and called the men now in charge scum. A body went into the ground. The thing that started moving when he died did not go with it.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-07-07">
@@ -921,6 +993,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE UNCONTAINED <span>· Tuesday · July 7, 2026</span></h2>
     <div class="entry-keys"><span>FIRE</span><span>FLOOD</span><span>EVIDENCE</span><span>BLOWOUT</span></div>
     <div class="entry-stmt"><p>Thirty-six wildfires are burning too big for the lines cut to stop them — the highest readiness level the system has, and still not enough hands to hold every front. The Northeast sits under a flood watch, waiting to find out if the ground will do what the forecast assumes. In Manila, a vice president listens to a second day of evidence built specifically to unmake her. And on a pitch built for upsets, the U.S. gave up four goals to Belgium before anyone had time to believe it was happening. Some lines are drawn to be tested. Nobody drew today&#x27;s expecting them to hold.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-07-06">
@@ -933,6 +1006,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE SCALE <span>· Monday · July 6, 2026</span></h2>
     <div class="entry-keys"><span>CARD</span><span>HEAT</span><span>KYIV</span><span>LEBANON</span></div>
     <div class="entry-stmt"><p>A red card got lifted within a day — first time that&#x27;s happened at a World Cup since 1962, because the U.S. president asked for it. In Lebanon, the ceasefire nobody enforces got broken again, this time in Nabatieh, and four people didn&#x27;t get an appeal. A heat dome sat on 185 million people through the weekend and killed twenty-five of them, quietly, the way heat does. In Kyiv, missiles found the exact gaps in air defense they&#x27;d found before. And in Tehran, sons no one had seen since February — since the war that killed their father — surfaced at his funeral, back from wherever missing people go. Some things get reversed in an afternoon. Some things just keep happening to the same people, in the same places, until it stops being news.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-07-05">
@@ -945,6 +1019,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE WINDOW <span>· Sunday · July 5, 2026</span></h2>
     <div class="entry-keys"><span>MEMECOIN</span><span>BOSS</span><span>MBAPPE</span></div>
     <div class="entry-stmt"><p>Nearly a million people bought Trump&#x27;s memecoin hoping to be early. By the end of June, 988,905 of them were underwater -- $3.81 billion lost, according to Nansen&#x27;s tracking. The window for outsized gains lasted about 48 hours after launch; almost everyone arrived after it closed. Trump himself disclosed $636 million in personal income from the token, nearly three times what every buyer combined has made, gains included. Being early was the whole game. Most people didn&#x27;t know the game had already ended.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-07-04">
@@ -957,6 +1032,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE RECORD <span>· Saturday · July 4, 2026</span></h2>
     <div class="entry-keys"><span>HEAT</span><span>STORM</span><span>EVACUATE</span><span>RECORD</span></div>
     <div class="entry-stmt"><p>Philadelphia hit a hundred and one degrees for the third day running today — a record that stood since eighteen seventy three. Storms rolled over Washington in the same hours, and the National Mall was ordered to evacuate mid-celebration, on the actual day, the one the other two hundred forty nine didn&#x27;t have to survive. They canceled the parade. They kept the fireworks: the biggest attempt on record, over eight hundred thousand shells, launched into the same sky that had just chased everyone off the lawn. Nobody asked whether tonight, of all nights, needed a record. It got one anyway.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-07-03">
@@ -969,6 +1045,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE MISFIRE <span>· Friday · July 3, 2026</span></h2>
     <div class="entry-keys"><span>FIREWORK</span><span>DONORS</span><span>SWELTER</span></div>
     <div class="entry-stmt"><p>Tonight the National Mall counts down to two hundred fifty years, and three separate things caught fire wrong on the way there. A House report says the president&#x27;s allies rerouted birthday donations into a private account with their own wiring instructions attached. An eight year old girl died when a firework misfired the night before the real show. And a heat dome is closing the celebrations that are supposed to open tomorrow, city by city, hour by hour. None of it stops the countdown. Most of what went up tonight went up fine. That&#x27;s the part that&#x27;s hard to sit with.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-07-02">
@@ -981,6 +1058,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE RIPPLE <span>· Thursday · July 2, 2026</span></h2>
     <div class="entry-keys"><span>POOL</span><span>BILLION</span><span>KYIV</span></div>
     <div class="entry-stmt"><p>A former Olympian was indicted today for what the President called vandalism of the Reflecting Pool on the National Mall — a felony, days before that same lawn stages the country&#x27;s two hundred fiftieth birthday. His own financial disclosure landed the same week: personal income cleared two billion dollars for the year, defended without apology. Overnight, Russia hit Kyiv again — seventeen dead by morning, dozens more wounded, retaliation for a strike on oil half a world away. Some surfaces get planned for months. It only takes one crack to show what they were built to hide.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-07-01">
@@ -993,6 +1071,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE LEDGER <span>· Wednesday · July 1, 2026</span></h2>
     <div class="entry-keys"><span>EBOLA</span><span>CONGO</span><span>SILENCE</span></div>
     <div class="entry-stmt"><p>Congo&#x27;s Ebola outbreak passed three hundred dead this week — on track to become one of the worst in recent memory — and it barely surfaced. Everyone&#x27;s attention was on Iran, on the Supreme Court&#x27;s last-day flurry of rulings, on a World Cup being played through record heat. Some deaths get a ceasefire deadline and a countdown clock. Others just get added to a number that keeps climbing, alone, without anyone announcing it out loud.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-06-30">
@@ -1005,6 +1084,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE REMAINDER <span>· Tuesday · June 30, 2026</span></h2>
     <div class="entry-keys"><span>COMPLETION</span><span>BOY</span><span>AXON</span></div>
     <div class="entry-stmt"><p>An Israeli official said the IDF holds nearly 70 percent of Gaza and called for &quot;completion&quot; of the remaining thirty — with settlements to follow. A 15-year-old was killed in a raid near Ramallah. A new report counted the West Bank&#x27;s dead children for last year and it was the worst count since 1967. Meanwhile the Supreme Court drew one small line the other way, saying your phone&#x27;s location is still yours. Someone bought stock in the company that makes the weapon two weeks before the government bought the weapon. Percentages don&#x27;t have children in them. That&#x27;s what they&#x27;re for.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-06-29">
@@ -1017,6 +1097,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE FEVER <span>· Monday · June 29, 2026</span></h2>
     <div class="entry-keys"><span>HEAT</span><span>COURT</span><span>MISSING</span></div>
     <div class="entry-stmt"><p>The day ran several temperatures at once. France&#x27;s heat wave crossed a thousand dead. Venezuela&#x27;s earthquake toll climbed past seventeen hundred, tens of thousands still unaccounted for. The Supreme Court ruled that presidents can fire the heads of independent agencies — consolidating power on a day when the earth itself was taking lives. A man named Felix Alcorta-Rodriguez died in ICE custody in Laredo, the twentieth such death this year, by official count. The ceasefire with Iran held, barely, while Lebanon absorbed fresh Israeli strikes from a deal that had just been signed. The heat dome built over the eastern two-thirds of the country, ahead of the holiday. Nothing failed on its own. Everything ran hot together.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-06-28">
@@ -1029,6 +1110,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE HOST <span>· Sunday · June 28, 2026</span></h2>
     <div class="entry-keys"><span>GOAL</span><span>QUAKE</span><span>SMOKE</span></div>
     <p class="entry-noStmt">No statement was written this day — only the reading.</p>
+    
   </div>
 </article>
 <article class="entry" id="2026-06-27">
@@ -1041,6 +1123,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE FAULT <span>· Saturday · June 27, 2026</span></h2>
     <div class="entry-keys"><span>IRAN</span><span>GROUND</span><span>DEAL</span></div>
     <p class="entry-noStmt">No statement was written this day — only the reading.</p>
+    
   </div>
 </article>
 <article class="entry" id="2026-06-26">
@@ -1053,6 +1136,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE REPRIEVE <span>· Friday · June 26, 2026</span></h2>
     <div class="entry-keys"><span>HAITIANS</span><span>SAILORS</span><span>BOLTON</span></div>
     <div class="entry-stmt"><p>Day 177 of 2026. June 26. Supreme Court ends Temporary Protected Status for 350,000 Haitians and Syrians. Sailors frozen in the Strait of Hormuz after unknown projectile. Nobody claiming the shot. Bolton pleads guilty: &quot;I am sorry for it.&quot; Venezuela earthquake dead at 589 and rising.</p><p>THE REPRIEVE. The thing that was given was always marked Temporary. They put it in the name.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-06-25">
@@ -1065,6 +1149,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE AFTERSHOCK <span>· Thursday · June 25, 2026</span></h2>
     <div class="entry-keys"><span>CARACAS</span><span>DRONE</span><span>RUBBLE</span></div>
     <p class="entry-noStmt">No statement was written this day — only the reading.</p>
+    
   </div>
 </article>
 <article class="entry" id="2026-06-24">
@@ -1077,6 +1162,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE THRESHOLD <span>· Wednesday · June 24, 2026</span></h2>
     <div class="entry-keys"><span>SENATE</span><span>HEAT</span><span>PRIMARY</span></div>
     <p class="entry-noStmt">No statement was written this day — only the reading.</p>
+    
   </div>
 </article>
 <article class="entry" id="2026-06-23">
@@ -1089,6 +1175,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE NARROWS <span>· Tuesday · June 23, 2026</span></h2>
     <div class="entry-keys"><span>IRAN</span><span>HEAT</span><span>CEASEFIRE</span></div>
     <div class="entry-stmt"><p>Iran claims permanent management of the Strait of Hormuz. Oil sanctions lifted temporarily. Peace talks at the narrowest point. Lebanon ceasefire fraying — 2 killed, Tehran warns of collapse. France baking. Ebola crosses 1,000 in the DRC. Senate passes bipartisan housing bill — a rare opening. The world&#x27;s oil, blood, diplomacy — all forced through the same narrow gate.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-06-22">
@@ -1101,6 +1188,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE APEX <span>· Monday · June 22, 2026</span></h2>
     <div class="entry-keys"><span>IRAN</span><span>SOLSTICE</span><span>SMOKE</span></div>
     <div class="entry-stmt"><p>The morning after the summer solstice. JD Vance in Switzerland building a peace deal while Trump tweets war threats at Iran. The MOU was signed electronically — no ceremony. No witnesses. No handshake. The longest day passed without being marked. Crimea suspending civilian gas sales. LA warehouse fire still smoldering. Poland broke with Zelensky over a military unit name. A 60-day countdown to a deal that may not arrive.</p><p>The apex is invisible. You don&#x27;t feel it happening. You only know later that this was the day the light started leaving.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-06-19">
@@ -1113,6 +1201,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE ARRIVAL <span>· Friday · June 19, 2026</span></h2>
     <div class="entry-keys"><span>OBAMA</span><span>MELONI</span><span>IRAN</span><span>ICE</span></div>
     <div class="entry-stmt"><p>Juneteenth. The Obama Presidential Center opens in Chicago today — the first Black president&#x27;s archive, on the anniversary of the delayed message. A $400M Boeing 747 touches down (foreign gift). Italy&#x27;s PM Meloni: &#x27;Italy and I do not beg.&#x27; Iran peace — preliminary. ICE expands facial recognition to every local badge.</p><p>June 19, 1865. General Order Number 3: all slaves are free. Two years after Lincoln signed it. The message came late. The message always comes late.</p><p>The day isn&#x27;t the thing. It&#x27;s when the news of the thing arrives.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-06-15">
@@ -1125,6 +1214,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE VAULT <span>· Monday · June 15, 2026</span></h2>
     <div class="entry-keys"><span>CEASEFIRE</span><span>CATHEDRAL</span><span>CURRENT</span></div>
     <div class="entry-stmt"><p>Russia struck the Dormition Cathedral at Kyiv&#x27;s Monastery of Caves — standing since 1051, struck today. Iran-US ceasefire extended 60 days: a vaulted pause, weight held overhead. Carolina Hurricanes end a 20-year drought with a shutout. The Atlantic cold spot signals what&#x27;s coming.</p><p>What holds the weight — until it can&#x27;t. The vault is the architecture of suspension.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-06-14">
@@ -1137,6 +1227,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE FREQUENCY <span>· Sunday · June 14, 2026</span></h2>
     <div class="entry-keys"><span>CURACAO</span><span>OPENING</span><span>BIRTHDAY</span></div>
     <div class="entry-stmt"><p>June 14, 2026 — day 165 of year — CLXV THE FREQUENCY</p><p>World Cup opens in America. Germany 7-1 Curaçao — their first ever World Cup game. Israel strikes Beirut. Iran warns of imminent response. Somali referee Omar Artan refused entry into the US. FIFA pays him anyway. He still doesn&#x27;t get to be there. Trump turns 80. Flag Day.</p><p>The game and the missile at the same hour on the same earth. Two signals. Different wavelengths. Neither stops for the other. That&#x27;s what a frequency is.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-06-13">
@@ -1149,6 +1240,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE BORROWED <span>· Saturday · June 13, 2026</span></h2>
     <div class="entry-keys"><span>POPE</span><span>STRAIT</span><span>PULISIC</span></div>
     <div class="entry-stmt"><p>June 13, 2026 — day 164 of year THE BORROWED Iran: Trump says peace deal signed Sunday. Iran says: not yet. Pope Leo&#x27;s charter plane grounded by mechanical failure. Spain&#x27;s king offers his private jet. The sacred flies on royal wings. SpaceX Day 1 of trading — the rocket now belongs to the market. World Cup: USA 4-1 Paraguay. Pulisic electric, departs at halftime. The morning after the crossings. When the vessel breaks and someone else&#x27;s system catches you.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-06-12">
@@ -1161,6 +1253,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE CROSSING <span>· Friday · June 12, 2026</span></h2>
     <div class="entry-keys"><span>IPO</span><span>YOON</span><span>COPA</span></div>
     <div class="entry-stmt"><p>June 12, 2026 — day 163 of year THE CROSSING SpaceX IPO: $75B raised. Musk crosses into trillionaire territory. Yoon Suk Yeol sentenced 30 years for drone provocations. US opens 2026 World Cup vs Paraguay. FISA 702 may expire — 60% of intel briefings run through it. Multiple thresholds crossed today. None announced themselves.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-06-11">
@@ -1173,6 +1266,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE REPRIEVE <span>· Thursday · June 11, 2026</span></h2>
     <div class="entry-keys"><span>IRAN</span><span>KNICKS</span><span>IPO</span><span>MEASLES</span></div>
     <div class="entry-stmt"><p>June 11, 2026 — day 162 of year THE REPRIEVE Trump calls off night 3 of Iran strikes. Knicks comeback from 29 down. SpaceX IPO. Measles 2000+. The catastrophe that did not arrive tonight.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-06-10">
@@ -1185,6 +1279,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE DEBUT <span>· Wednesday · June 10, 2026</span></h2>
     <div class="entry-keys"><span>HIMARS</span><span>STRAIT</span><span>DEBUT</span></div>
     <div class="entry-stmt"><p>June 10, 2026 — day 161 THE DEBUT</p><p>Headlines: - US launched new strikes against Iran (dragging feet on negotiations) - FIRST TIME: US-supplied HIMARS fired into the Taiwan Strait - Israeli strikes kill 13+ in southern Lebanon - UK anti-immigration riots after stabbing arrest - FIRST TIME: Uzbekistan, Jordan, Cape Verde, Curacao — World Cup debut - Nation&#x27;s 9-year-olds improving in math and reading</p><p>The day is about firsts. Some terrible. Some luminous. The parabolic arc of a missile and the parabolic arc of a ball are the same shape crossing open space.</p><p>Art: three horizontal zones — two dense shores, one sparse strait. A gold trajectory arc from shore to shore, crossing through open water. A circle at the apex: the crossing moment.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-06-09">
@@ -1197,6 +1292,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE COMPLETED <span>· Tuesday · June 9, 2026</span></h2>
     <div class="entry-keys"><span>IRAN</span><span>ACCORD</span><span>SCHOOL</span></div>
     <p class="entry-noStmt">No statement was written this day — only the reading.</p>
+    
   </div>
 </article>
 <article class="entry" id="2026-06-08">
@@ -1209,6 +1305,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE BURIED <span>· Monday · June 8, 2026</span></h2>
     <div class="entry-keys"><span>QUAKE</span><span>IRAN</span><span>TSUNAMI</span></div>
     <div class="entry-stmt"><p>A 7.8 earthquake rocked the southern Philippines today. 32 dead. Tsunami. 200+ injured.</p><p>It was the 100th day of the Israel-Iran war. Israel and Iran traded missiles under an active ceasefire. The earthquake was the fourteenth paragraph.</p><p>Teal: the horizontal field — time, the world, the news cycle, the steady churn. Gold: the seismograph — the event that happened whether anyone watched or not.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-06-07">
@@ -1221,6 +1318,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE SHEAR <span>· Sunday · June 7, 2026</span></h2>
     <div class="entry-keys"><span>TREMOR</span><span>PEPFAR</span><span>CORPUS</span></div>
     <p class="entry-noStmt">No statement was written this day — only the reading.</p>
+    
   </div>
 </article>
 <article class="entry" id="2026-06-05">
@@ -1233,6 +1331,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE THREAD <span>· Friday · June 5, 2026</span></h2>
     <div class="entry-keys"><span>SLEEP</span><span>IRAN</span><span>HUNGER</span></div>
     <div class="entry-stmt"><p>Iran talks hanging by a thread — US shot down four Iranian drones near the Strait of Hormuz, then struck Iranian radar sites in response. A Palestinian family of five burned alive in their sleep in Gaza City. World Food Programme: Hormuz closure pushing millions into acute hunger. Hezbollah rejected the ceasefire within hours of announcement. Jan. 6 rioter hired at Pentagon to handle classified military information.</p><p>Everything flowing through the same narrow passage. The thread holds. Or it doesn&#x27;t.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-06-04">
@@ -1245,6 +1344,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE ASTERISK <span>· Thursday · June 4, 2026</span></h2>
     <div class="entry-keys"><span>WORKERS</span><span>STRIKES</span><span>MODERATE</span></div>
     <div class="entry-stmt"><p>Israel and Lebanon signed a ceasefire agreement. Strikes continued in Lebanon within hours. Trump: &quot;In that part of the world, ceasefire is when you&#x27;re shooting in a more moderate manner.&quot;</p><p>8,000 federal workers stripped of job protections. Made at-will. Can be fired for no stated reason. The guarantee, withdrawn.</p><p>Every promise today came with fine print. Every agreement contained its own undoing. The footnote cancels the headline.</p><p>Gold extension rays beyond the arms — the condition continues past the visible frame.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-06-03">
@@ -1257,6 +1357,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE FORUM <span>· Wednesday · June 3, 2026</span></h2>
     <div class="entry-keys"><span>FORUM</span><span>DRONE</span><span>HARBOR</span></div>
     <div class="entry-stmt"><p>Ukrainian drones struck an oil terminal in St. Petersburg and set it ablaze while Putin hosted his annual economic forum in the same city. Iran struck Kuwait International Airport with a drone. Casualties. US-Iran ceasefire talks: Trump says negotiations going &#x27;very well.&#x27; OMB moving to seize control of federal grant funding. Science at risk.</p><p>The day&#x27;s texture: the table is set. The harbor is burning behind the presenter. Neither event interrupts the other. That is exactly the point.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-06-02">
@@ -1269,6 +1370,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE MOUTH <span>· Tuesday · June 2, 2026</span></h2>
     <div class="entry-keys"><span>CEASEFIRE</span><span>PRIMARIES</span><span>REVOLT</span></div>
     <div class="entry-stmt"><p>Trump announced ceasefire: &quot;all shooting will stop.&quot; Israel kept shooting. At least 8 dead in Lebanon after the announcement. Iran suspended nuclear talks with the US. Tens of thousands of ultra-Orthodox Israelis blockaded roads, set cars on fire — protesting mandatory military service. Civil war inside a country at war. Six primaries. Scott Pelley revolting at CBS against Bari Weiss. A court ruled the transgender military ban illegal.</p><p>The day&#x27;s texture: the word is not the fact. The signal sent and the signal received are two different things. Two broadcasts, same frequency, making static between them.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-06-01">
@@ -1281,6 +1383,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE TALLY <span>· Monday · June 1, 2026</span></h2>
     <div class="entry-keys"><span>BOATS</span><span>CASTLE</span><span>PILL</span></div>
     <div class="entry-stmt"><p>The US military killed 205 people this week in Pacific drug enforcement strikes. Four attacks. No names released. Drug smugglers, said the statement. Israel captured Beaufort Castle in Lebanon — a 12th century fortress. A pancreatic cancer pill bought more time. PSG won again.</p><p>The weight of June 1 is not the castle or the ball. It is the count. The way a body becomes a number. The way 205 becomes a policy result.</p><p>The tally marks fill the page. All complete in the upper field — the old counting, done. The last row gold, and the rightmost marks still forming. The final group has one line. Just started.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-05-30">
@@ -1293,6 +1396,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE WEIGHT <span>· Saturday · May 30, 2026</span></h2>
     <div class="entry-keys"><span>INFLATION</span><span>BEIRUT</span><span>ROCKET</span></div>
     <div class="entry-stmt"><p>Netanyahu orders Israel&#x27;s army to seize 70% of Gaza Strip. Israel bombs Beirut, expands assault on Southern Lebanon. UN adds Israel to &quot;blacklist&quot; for sexual violence in conflict zones. US military ready to resume combat in Gulf if needed. Blue Origin rocket explodes — Bezos&#x27;s spaceship ambitions fall. US inflation hits 3.8%, highest since 2023. Bus crash in Virginia kills five on a Saturday afternoon.</p><p>Everything pressing. A Saturday night weighted with the whole week. Not a breach, not a threshold — a settling. The lines were horizontal once. The world made them sag.</p><p>Image: horizontal lines, evenly spaced at the edges, but each one bows downward under accumulated weight. Sag increases quadratically — upper lines barely bend, lower lines buckle toward the floor. Density pools at bottom center. The weight lives there. Everything is falling toward it.</p><p>Gold: the five lines at maximum visible tension — the ones that held the full arc without touching the ground. The last moment before giving way.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-05-29">
@@ -1305,6 +1409,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE THRESHOLD <span>· Friday · May 29, 2026</span></h2>
     <div class="entry-keys"><span>PENDING</span><span>ADVANCE</span><span>BORDERS</span></div>
     <div class="entry-stmt"><p>US-Iran ceasefire deal &quot;very close&quot; — pending Trump&#x27;s signature, still unsigned. Netanyahu orders Israeli army to seize 70% of Gaza while the deal is almost done. Russian drone crashes into Romanian apartment — NATO territory, accidentally crossed. 7 of 11 bodies recovered from chemical tank implosion at paper mill in Longview. Blue Origin rocket explodes. Europe heatwave: Portugal&#x27;s hottest May on record. UN warns: 1.5C by 2030.</p><p>The line you cross isn&#x27;t the line you&#x27;re watching.</p><p>Above the threshold: the world of agreements. Ordered, converging, almost-signed. Dense lines crowding toward a signature line that nobody has touched. Below it: reality. The same horizontal motion, but fragmented, dispersed, drifting. Not chaos — just: past the line. Already through.</p><p>The threshold itself in gold. The signature line. The tick marks for a pen that hasn&#x27;t come.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-05-27">
@@ -1317,6 +1422,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE MUZZLE <span>· Wednesday · May 27, 2026</span></h2>
     <div class="entry-keys"><span>GAG</span><span>HUNGER</span><span>IRIS</span></div>
     <div class="entry-stmt"><p>Gag orders for all federal workers. Supreme Court silences judges. Hunger strikers in Newark threatened with force-feeding. Iris scanning expanding. Iran internet blackout. Gaza: &quot;They say there is a ceasefire, but there is no ceasefire for us.&quot;</p><p>Every institution closing mouths. Some mouths refusing to close.</p><p>Potential flow field: horizontal lines of signal flowing rightward — speech, information, voice. A central elliptical void deflects the flow. Lines curve around it, squeeze through the gaps above and below. The void is defined only by absence — no border drawn. The teal field is the deflected majority. The gold lines are the ones that passed closest to the silence and had to bend the furthest to survive.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-05-26">
@@ -1329,6 +1435,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE BREACH <span>· Tuesday · May 26, 2026</span></h2>
     <div class="entry-keys"><span>CHECKPOINT</span><span>HEAT</span><span>CONTAGION</span></div>
     <div class="entry-stmt"><p>Shots at the White House checkpoint. U.S. strikes Iran during ceasefire talks. Europe&#x27;s heat kills a runner mid-race. Ebola outrunning containment. Everything that was supposed to hold — didn&#x27;t.</p><p>Dense horizontal hatching forms a wall. Three breach points where the lines are absent, fracture lines radiate outward, debris scatters. The wall is there. It just isn&#x27;t enough.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-05-25">
@@ -1341,6 +1448,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE PASSAGE <span>· Monday · May 25, 2026</span></h2>
     <div class="entry-keys"><span>STRAIT</span><span>HONOR</span><span>MINES</span></div>
     <div class="entry-stmt"><p>Memorial Day. America&#x27;s 250th year pauses at the graves. Iran deal to reopen the Strait of Hormuz — clear the mines so ships pass. Everything today is passage: the strait, the dead, the years, the deal.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-05-22">
@@ -1353,6 +1461,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE CASING <span>· Friday · May 22, 2026</span></h2>
     <div class="entry-keys"><span>IMMUNITY</span><span>CEASEFIRE</span><span>DISSOLUTION</span></div>
     <div class="entry-stmt"><p>IRS settlement: the president can never be investigated again. Massie ousted for wanting the Epstein files. Double-tap on paramedics under a ceasefire nobody enforces. Knesset dissolving. Congress on recess. Iran war vote delayed.</p><p>The structures persist. The mechanism inside is spent. Concentric rings dissolving inward — solid shell, fractured middle, void center.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-05-20">
@@ -1365,6 +1474,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE PARALLEL <span>· Wednesday · May 20, 2026</span></h2>
     <div class="entry-keys"><span>EBOLA</span><span>HANDSHAKE</span><span>VERDICT</span></div>
     <p class="entry-noStmt">No statement was written this day — only the reading.</p>
+    
   </div>
 </article>
 <article class="entry" id="2026-05-18">
@@ -1377,6 +1487,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE SIREN <span>· Monday · May 18, 2026</span></h2>
     <div class="entry-keys"><span>PLAGUE</span><span>STORM</span><span>PRAYER</span></div>
     <p class="entry-noStmt">No statement was written this day — only the reading.</p>
+    
   </div>
 </article>
 <article class="entry" id="2026-05-16">
@@ -1389,6 +1500,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE KEPT <span>· Saturday · May 16, 2026</span></h2>
     <div class="entry-keys"><span>CAVE</span><span>SUMMIT</span><span>GRAVITY</span></div>
     <p class="entry-noStmt">No statement was written this day — only the reading.</p>
+    
   </div>
 </article>
 <article class="entry" id="2026-05-13">
@@ -1401,6 +1513,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE CEREMONY <span>· Wednesday · May 13, 2026</span></h2>
     <div class="entry-keys"><span>SUMMIT</span><span>URANIUM</span><span>INK</span></div>
     <p class="entry-noStmt">No statement was written this day — only the reading.</p>
+    
   </div>
 </article>
 <article class="entry" id="2026-05-11">
@@ -1413,6 +1526,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE UNDERTOW <span>· Monday · May 11, 2026</span></h2>
     <div class="entry-keys"><span>VOTE</span><span>SHIFT</span><span>GROUND</span></div>
     <div class="entry-stmt"><p>Card CXXXI — THE UNDERTOW May 11, 2026</p><p>First instinct was THE THROAT — Strait of Hormuz closed ten weeks, ceasefire on life support, oil at 103. But that groove is carved deep: THE STRAITS, THE STRAIT, ceasefire in five of the last ten cards.</p><p>The second-loudest thing: Reform UK gained 1,450 council seats. Labour lost 1,500 councillors. Starmer facing resign calls. Not a revolt — a replacement. The current that was always pulling.</p><p>Also: Abe Foxman died at 86. The watchman stopped watching. Narges Mohammadi collapsed in prison — a body failing in captivity. The visible world stares at the strait. The ground moved elsewhere.</p><p>Two flow fields: calm horizontal surface above, dense diagonal undertow below. A waterline boundary. Gold where the force breaks through.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-05-10">
@@ -1425,6 +1539,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE VESSEL <span>· Sunday · May 10, 2026</span></h2>
     <div class="entry-keys"><span>SHIP</span><span>PAVILION</span><span>FIREWORK</span></div>
     <div class="entry-stmt"><p>Card CXXX — THE VESSEL May 10, 2026</p><p>Redo. First pull was THE TRUCE — same groove five shapes have ridden.</p><p>The second-loudest thing: every container in today&#x27;s news cracked from inside. Cruise ship turned plague ship. Venice pavilions emptied by their own artists. Fireworks factory killed 37. Ceasefire leaking before it sealed.</p><p>Voronoi cells in the shape of a vessel — dense and compressed at the center (the crowd, the pressure, the trapped), opening outward (the crack, the breach). The cell walls are the structure. The seeds are the contents. The container and the thing it couldn&#x27;t hold.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-05-09">
@@ -1437,6 +1552,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE LULL <span>· Saturday · May 9, 2026</span></h2>
     <div class="entry-keys"><span>TRUCE</span><span>SHIP</span><span>PARADE</span></div>
     <div class="entry-stmt"><p>card_2026_05_09.py — THE LULL</p><p>day 129 of 2026. a three-day ceasefire between russia and ukraine begins on victory day — the parade is downsized, north korean soldiers march in red square. iran threatens retaliation if its ships are touched during the pause. a cruise ship with hantavirus drifts toward tenerife at dawn, three dead, a hundred still aboard. food prices climb for the third month.</p><p>everything paused. nothing resolved. the lull is not peace — it&#x27;s the shape the noise leaves behind when it holds its breath.</p><p>Image: horizontal sine waves with amplitude that dampens to near-zero at the vertical center, growing turbulent at top and bottom edges. the center is the lull — the flatline moment. a gold horizontal thread marks the stillness. small gold marks along it like particles caught in the node of a standing wave. the tension is in what&#x27;s almost-still.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-05-07">
@@ -1449,6 +1565,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE TRANSMITTER <span>· Thursday · May 7, 2026</span></h2>
     <div class="entry-keys"><span>TURNER</span><span>BREACH</span><span>VATICAN</span></div>
     <div class="entry-stmt"><p>card_2026_05_07.py — THE TRANSMITTER</p><p>day 127 of 2026. ted turner dies at 87 — the man who built CNN, the never-stopping signal. his mind went years ago but the broadcast kept going. israel bombs beirut through a ceasefire. iran reviews peace terms. rubio meets the pope. a drone hits a kindergarten in sumy — empty. everything is sending. nothing is arriving.</p><p>Image: radial dashes emanating from an off-center source point — dense and long near the origin, thinning to scattered dots at the edges. the signal degrades with distance. a gold starburst marks the transmitter. the broadcast that outlives its source.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-05-06">
@@ -1461,6 +1578,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE TERMS <span>· Wednesday · May 6, 2026</span></h2>
     <div class="entry-keys"><span>PAUSE</span><span>FREEDOM</span><span>SURRENDER</span></div>
     <div class="entry-stmt"><p>CXXVI — THE TERMS May 6, 2026</p><p>Trump pauses Hormuz but keeps the blockade. Iran&#x27;s deal: ship your uranium, shut your facilities. Press freedom at record low. Canvas hacked: pay or leak. Everything has conditions. The invisible document that bends everything around it.</p><p>Image: horizontal flow lines deflect around an empty rectangle — the void defined only by what moves around it. Gold crop marks and faint rules inside like unreadable fine print. The terms are there. You just can&#x27;t make them out.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-05-05">
@@ -1473,6 +1591,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE PINATA <span>· Tuesday · May 5, 2026</span></h2>
     <div class="entry-keys"><span>CINCO</span><span>GALA</span><span>CEASEFIRE</span></div>
     <div class="entry-stmt"><p>card_2026_05_05.py — THE PINATA</p><p>day 125 of 2026. cinco de mayo — celebrating a battle france ultimately won. the victory outlasted the war. tonight the met gala: outfits built to be seen once. russia declares a two-day ceasefire for victory day, built to break by design. iran hit fujairah&#x27;s oil zone — infrastructure built to be a target. the supreme court reopened mifepristone access. gas at $4.46.</p><p>everything today is a beautiful thing built to break. that&#x27;s the whole point.</p><p>image: a seven-pointed star piñata hanging from a thin string in the upper portion. concentric nested stars create density — the paper skin. gold streamers cascade from each point, waving wider as they fall. crimson fragments scatter below — triangles, circles, shards — the candy and the breaking. the moment between intact and open.</p><p>[first pull was THE STRAIT — third time in the strait groove after THE NARROWS (4/29) and THE STRAITS (5/4 first). hormuz is real but the reflex isn&#x27;t a reading.]</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-05-04">
@@ -1485,6 +1604,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE LEDGER <span>· Monday · May 4, 2026</span></h2>
     <div class="entry-keys"><span>SPIRIT</span><span>HONDIUS</span><span>PRESS</span></div>
     <div class="entry-stmt"><p>card_2026_05_04.py — THE LEDGER</p><p>day 124 of 2026. today wasn&#x27;t catastrophic — it was a posting day. spirit airlines declared. press freedom index 2026 published. fifth circuit ruled. hantavirus deaths announced on the hondius. none of this was new. all of it got written down.</p><p>image: a sparse ledger page. faint horizontal rules. tally marks in slate-blue scattered across older rows — most rows mostly empty. today&#x27;s row in amber. the last entry is partial — three strokes, the slash not yet drawn. it&#x27;s still being written.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-05-01">
@@ -1497,6 +1617,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE HINGE <span>· Friday · May 1, 2026</span></h2>
     <div class="entry-keys"><span>WALKOUT</span><span>BLOCKADE</span><span>RULING</span><span>CHARGE</span></div>
     <div class="entry-stmt"><p>Daily card — May 1, 2026 THE HINGE</p><p>UAE exits OPEC after 60 years. May Day walkouts. 3,000 protests. DHS reopens. Voting Rights Act gutted. Hormuz blockade. Suu Kyi: prison to house arrest. Everything walking through doors. The same door. Different directions.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-04-30">
@@ -1509,6 +1630,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE LINE <span>· Thursday · April 30, 2026</span></h2>
     <div class="entry-keys"><span>MAP</span><span>SHIELD</span><span>FUND</span><span>POUR</span></div>
     <div class="entry-stmt"><p>Day 120. CXX.</p><p>A population scattered evenly. A gerrymandered boundary cuts through, pushed to the right — the included zone is small. On the included side, gold Delaunay edges connect the points into a community. On the excluded side, the same dots float alone. Unconnected. Uncounted.</p><p>Supreme Court struck down Louisiana&#x27;s second Black district, 6-3. Same day: ready to let TPS be revoked for Haitians, Syrians. Both lines moved the same direction. To exclude. DHS funded after 75 days dark. $725B in AI capex. Pentagon has &quot;short and powerful&quot; strikes on the table.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-04-29">
@@ -1521,6 +1643,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE NARROWS <span>· Wednesday · April 29, 2026</span></h2>
     <div class="entry-keys"><span>BLOCKADE</span><span>HELD</span><span>SHELLS</span><span>STRAIT</span></div>
     <div class="entry-stmt"><p>Day 119. CXIX.</p><p>Horizontal lines span the image, evenly spaced — then pinch to a brutal chokepoint at center. All of them converge. The narrow place compresses everything into almost nothing. Gold dots cluster at the pinch — the things that wait.</p><p>Iran blockade. Strait of Hormuz in limbo. Oil at $118. Fed holds. Powell&#x27;s last meeting. Comey indicted for seashells. The whole day is one chokepoint.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-04-28">
@@ -1533,6 +1656,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE BALLOT <span>· Tuesday · April 28, 2026</span></h2>
     <div class="entry-keys"><span>BALLOT</span><span>STRAIT</span><span>CROWN</span><span>DEBT</span></div>
     <div class="entry-stmt"><p>Day 118. CXVIII.</p><p>A wall of tally marks — vertical, patient, identical. Twenty years of silence counted out in rows. One mark is different. One mark is crossed. Gold, not teal. The X. The vote. The ballot.</p><p>Palestinians voted for the first time in two decades today. While the state dinner gleamed and the war ground on. The quietest thing in the news was the loudest.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-04-27">
@@ -1545,6 +1669,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE GATE <span>· Monday · April 27, 2026</span></h2>
     <div class="entry-keys"><span>DINNER</span><span>CROWN</span><span>FIRE</span><span>SCREEN</span></div>
     <div class="entry-stmt"><p>A man with a shotgun charged the security checkpoint at the correspondents&#x27; dinner. The gate held. The next day a king arrives for tea. They set the table anyway.</p><p>Image: dense horizontal hatching split by a narrow vertical gap. Two walls of mass with a slit of light between them. The gap is the gate — what passes through and what doesn&#x27;t. Gold marks the threshold and what made it through.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-04-26">
@@ -1557,6 +1682,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE BANQUET <span>· Sunday · April 26, 2026</span></h2>
     <div class="entry-keys"><span>GUNFIRE</span><span>STRAIT</span><span>CHERNOBYL</span><span>CROWN</span></div>
     <div class="entry-stmt"><p>Card CXVI — THE BANQUET April 26, 2026</p><p>A shooting at the White House Correspondents&#x27; Dinner. Iran talks collapse. Strait of Hormuz choked. Chernobyl at 40. The room was set for performance. The gun was not performing.</p><p>Image: A grid of circles — place settings at a banquet table. Orderly at the edges, shattering toward an off-center epicenter. Fragments displaced outward. Radial crack lines propagate through. Teal for the intact settings. Gold for the shatter.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-04-25">
@@ -1569,6 +1695,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE NEEDLE <span>· Saturday · April 25, 2026</span></h2>
     <div class="entry-keys"><span>BAMAKO</span><span>SQUAD</span><span>BOTOX</span></div>
     <p class="entry-noStmt">No statement was written this day — only the reading.</p>
+    
   </div>
 </article>
 <article class="entry" id="2026-04-24">
@@ -1581,6 +1708,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE ENTRENCHED <span>· Friday · April 24, 2026</span></h2>
     <div class="entry-keys"><span>CEASEFIRE</span><span>REPLACED</span><span>HUNGER</span></div>
     <p class="entry-noStmt">No statement was written this day — only the reading.</p>
+    
   </div>
 </article>
 <article class="entry" id="2026-04-23">
@@ -1593,6 +1721,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE WITNESS <span>· Thursday · April 23, 2026</span></h2>
     <div class="entry-keys"><span>TOLL</span><span>PROBE</span><span>GAS</span><span>ARREST</span><span>AIR</span></div>
     <p class="entry-noStmt">No statement was written this day — only the reading.</p>
+    
   </div>
 </article>
 <article class="entry" id="2026-04-22">
@@ -1605,6 +1734,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE MORATORIUM <span>· Wednesday · April 22, 2026</span></h2>
     <div class="entry-keys"><span>BLOCKADE</span><span>EARTH</span><span>PAUSE</span></div>
     <p class="entry-noStmt">No statement was written this day — only the reading.</p>
+    
   </div>
 </article>
 <article class="entry" id="2026-04-21">
@@ -1617,6 +1747,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE EVE <span>· Tuesday · April 21, 2026</span></h2>
     <div class="entry-keys"><span>CEASEFIRE</span><span>PYRAMID</span><span>WOMEN</span></div>
     <div class="entry-stmt"><p>Day CXI.</p><p>Today: - US–Iran ceasefire expires tomorrow. Trump: extension &quot;highly unlikely.&quot; - A man climbed a Teotihuacan pyramid and opened fire on tourists. One Canadian dead, 13 injured. The shape built to measure time became a platform. - Japan cleared the last hurdles for postwar arms sales. - Six Goldman Environmental Prize winners, all women, first time since 1989.</p><p>The thread: countdown. Tomorrow the treaty ends. The world is arming. Someone climbed the sacred calendar and used it as a vantage.</p><p>Composition: THE PYRAMID — horizontal strata in teal, building the ancient silhouette. Dense at the base, breaking at the apex. THE ARRIVAL — gold radial lines fanning down from upper-right, converging on the apex. The future pulling. Incoming. THE WOUND — a thin break in the strata near the peak. The place violence touched.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-04-20">
@@ -1629,6 +1760,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE FASTER <span>· Monday · April 20, 2026</span></h2>
     <div class="entry-keys"><span>LIGHTNING</span><span>STRAIT</span><span>EIGHT</span></div>
     <div class="entry-stmt"><p>Day CX.</p><p>Today: - A humanoid robot named Lightning ran 21k in 50:26 — six minutes faster than the human half-marathon world record. It was developed by Honor, a Huawei spinoff. - Strait of Hormuz closed again — 20% of world oil cannot pass. - Eight children shot and killed by their father in Louisiana.</p><p>The under-read signal: we built the thing that ran past us. The last ten days of cards have held the Strait (crossed, severed, thresholded). Today&#x27;s new weight is the machine that won. Plus the eight who should have been somewhere and weren&#x27;t.</p><p>Composition mirrors the reading: THE RUNNER — a horizontal streak, motion-blurred across the upper field. Gold. THE WALL — dense vertical hatching below. Teal. Standing, not piled. THE EIGHT — rust circles scattered in the wall. The absent.</p><p>Both the runner and the wall are ours.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-04-19">
@@ -1641,6 +1773,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE DOSE <span>· Sunday · April 19, 2026</span></h2>
     <div class="entry-keys"><span>IBOGAINE</span><span>HORMUZ</span><span>SHREVEPORT</span></div>
     <div class="entry-stmt"><p>CIX — THE DOSE IV.XIX.MMXXVI</p><p>The first pull was THE STRAIT. The week already had that. Twice. April 6 and April 8 were both THE STRAIT — on Hormuz news both times. Today the strait is the strait again. The world is still a chokepoint. But the second-loudest thing is the door they unlatched while we watched the water: fifty million for ibogaine research. The locked cabinet — half a century bolted — opened by line item while oil refused to move.</p><p>Keywords: IBOGAINE HORMUZ SHREVEPORT Reading: THE LOCKED CABINET OPENED / WHILE THE WATER STAYED SHUT</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-04-18">
@@ -1653,6 +1786,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE LOT <span>· Saturday · April 18, 2026</span></h2>
     <div class="entry-keys"><span>TITANIC</span><span>KYIV</span><span>BEIRUT</span></div>
     <div class="entry-stmt"><p>card_2026_04_18 — THE LOT</p><p>saturday. a life vest worn by a titanic passenger sold at auction for 670,000 pounds. the man did not survive. the vest did. so did the lot number. so did the paperwork.</p><p>the thing that failed at one kind of holding succeeded at another. somebody paid almost a million for the staying.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-04-17">
@@ -1665,6 +1799,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE REPRIEVE <span>· Friday · April 17, 2026</span></h2>
     <div class="entry-keys"><span>CEASEFIRE</span><span>KYIV</span><span>MARCH</span></div>
     <div class="entry-stmt"><p>card for april 17, 2026 — THE REPRIEVE</p><p>the day lebanon&#x27;s bombing stopped on a 10-day clock. the day kyiv took russia&#x27;s deadliest drone strike of the year. one war paused. another didn&#x27;t.</p><p>image: a dense field of vertical teal rain — the ongoing noise — with a horizontal clearing meandering through it. the clearing is uneven, organic, a river of silence with shape. inside the clearing, a faint gold center line traced by ten ticks. the ten days of the reprieve, counted before they arrive at zero.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-04-15">
@@ -1677,6 +1812,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE SEVERANCE <span>· Wednesday · April 15, 2026</span></h2>
     <div class="entry-keys"><span>BLOCKADE</span><span>VERDICT</span><span>PACT</span></div>
     <p class="entry-noStmt">No statement was written this day — only the reading.</p>
+    
   </div>
 </article>
 <article class="entry" id="2026-04-14">
@@ -1689,6 +1825,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE CROSSING <span>· Tuesday · April 14, 2026</span></h2>
     <div class="entry-keys"><span>BLOCKADE</span><span>BLOOD</span><span>FALL</span></div>
     <div class="entry-stmt"><p>CIV — THE CROSSING April 14, 2026</p><p>Hormuz blockade: ships cross anyway. Orbán falls after 16 years. Trump as AI Jesus, deleted. Pope says hands full of blood. Everything through the narrow place.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-04-13">
@@ -1701,6 +1838,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE LANDSLIDE <span>· Monday · April 13, 2026</span></h2>
     <div class="entry-keys"><span>ORBAN</span><span>POPE</span><span>MASTERS</span></div>
     <p class="entry-noStmt">No statement was written this day — only the reading.</p>
+    
   </div>
 </article>
 <article class="entry" id="2026-04-12">
@@ -1713,6 +1851,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE THRESHOLD <span>· Sunday · April 12, 2026</span></h2>
     <div class="entry-keys"><span>MARKET</span><span>SIXTEEN</span><span>MISFIRE</span><span>ICE</span></div>
     <div class="entry-stmt"><p>Not the strait again. The strait was april 6 and april 8. Today is about the line being crossed — or not.</p><p>21 hours of talks, no deal (tried, didn&#x27;t cross). 16 years of Orban, one election (crossed). One airstrike, wrong target, 100 dead (crossed the wrong line). Emperor penguins declared endangered (crossed). Oil past $100 (crossed).</p><p>Vertical lines rise from the bottom — forces, pressures, attempts. A single gold threshold line. Most lines stop below it. The few that cross continue upward in a different voice — wavy, uncertain, transformed. What you were before the line isn&#x27;t what you are after.</p><p>The right reading: nobody counts what tried.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-04-11">
@@ -1725,6 +1864,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE GILT <span>· Saturday · April 11, 2026</span></h2>
     <div class="entry-keys"><span>ARCH</span><span>STRAIT</span><span>MOON</span><span>FLAW</span><span>WAR</span></div>
     <div class="entry-stmt"><p>A gilded surface cracking. Voronoi crack network in teal, dense gold hatching filling the field between them. Where cracks cross the hatching, gaps appear — the gilt failing.</p></div>
+    
   </div>
 </article>
 <article class="entry" id="2026-04-10">
@@ -1737,6 +1877,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE LEDGER <span>· Friday · April 10, 2026</span></h2>
     <div class="entry-keys"><span>300</span><span>BUDGET</span><span>BALLOT</span><span>DOSE</span></div>
     <p class="entry-noStmt">No statement was written this day — only the reading.</p>
+    
   </div>
 </article>
 <article class="entry" id="2026-04-09">
@@ -1749,6 +1890,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE TERMS <span>· Thursday · April 9, 2026</span></h2>
     <div class="entry-keys"><span>CEASEFIRE</span><span>OIL</span><span>TALKS</span></div>
     <p class="entry-noStmt">No statement was written this day — only the reading.</p>
+    
   </div>
 </article>
 <article class="entry" id="2026-04-08">
@@ -1761,6 +1903,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE STRAIT <span>· Wednesday · April 8, 2026</span></h2>
     <div class="entry-keys"><span>CEASEFIRE</span><span>OIL</span><span>POPE</span></div>
     <p class="entry-noStmt">No statement was written this day — only the reading.</p>
+    
   </div>
 </article>
 <article class="entry" id="2026-04-07">
@@ -1773,6 +1916,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE ULTIMATUM <span>· Tuesday · April 7, 2026</span></h2>
     <div class="entry-keys"><span>STRAIT</span><span>MOON</span><span>DUSK</span></div>
     <p class="entry-noStmt">No statement was written this day — only the reading.</p>
+    
   </div>
 </article>
 <article class="entry" id="2026-04-06">
@@ -1785,6 +1929,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE STRAIT <span>· Monday · April 6, 2026</span></h2>
     <div class="entry-keys"><span>OIL</span><span>RIDGE</span><span>DEADLINE</span><span>STRIKE</span></div>
     <p class="entry-noStmt">No statement was written this day — only the reading.</p>
+    
   </div>
 </article>
 <article class="entry" id="2026-04-05">
@@ -1797,6 +1942,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE RISEN <span>· Sunday · April 5, 2026</span></h2>
     <div class="entry-keys"><span>RESCUE</span><span>RAGE</span><span>EASTER</span><span>STRIKE</span></div>
     <p class="entry-noStmt">No statement was written this day — only the reading.</p>
+    
   </div>
 </article>
 <article class="entry" id="2026-04-04">
@@ -1809,6 +1955,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE VANTAGE <span>· Saturday · April 4, 2026</span></h2>
     <div class="entry-keys"><span>WAR</span><span>MOON</span><span>BRIDGE</span><span>DRONE</span></div>
     <p class="entry-noStmt">No statement was written this day — only the reading.</p>
+    
   </div>
 </article>
 <article class="entry" id="2026-04-03">
@@ -1821,6 +1968,7 @@ footer a:hover { color: var(--registration); }
     <h2 class="entry-dateline">THE BRIDGE <span>· Friday · April 3, 2026</span></h2>
     <div class="entry-keys"><span>KARAJ</span><span>TRILLION</span><span>RESCUE</span><span>GULF</span></div>
     <p class="entry-noStmt">No statement was written this day — only the reading.</p>
+    
   </div>
 </article>
   </main>

@@ -7,7 +7,7 @@ and artist's statement, copies its SVG into cards/, and renders index.html.
 
 A card is one day. The day makes the card. Run after each new pull.
 """
-import re, os, glob, json, shutil, html, datetime
+import re, os, ast, glob, json, shutil, html, datetime
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 SRC = os.path.expanduser('~/Documents/the_gap/plays/plotter_squad')
@@ -43,6 +43,47 @@ def extract_statement(text):
             lines.append('')
     block = re.sub(r'\n{3,}', '\n\n', '\n'.join(lines).strip())
     return block if len(block) > 40 else None
+
+def extract_sources(text):
+    """The SOURCES list the cardpuller records — (publisher, label, url) tuples.
+
+    It sits BELOW the `frame = CardFrame(...)` call on purpose: extract_statement
+    reads the prefix above that line, so a SOURCES block up there would be
+    published as prose.
+
+    Parsed with ast, never exec'd — these files are written unattended, and
+    nothing in them should run just to render a page. Entries that are not a
+    3-tuple, or whose url is not http(s), are dropped rather than published: a
+    broken link in the archive is worse than a missing one.
+    """
+    try:
+        tree = ast.parse(text)
+    except SyntaxError:
+        return []
+    node = None
+    for stmt in tree.body:                      # module level only
+        if isinstance(stmt, ast.Assign):
+            for tgt in stmt.targets:
+                if isinstance(tgt, ast.Name) and tgt.id == 'SOURCES':
+                    node = stmt.value
+    if node is None:
+        return []
+    try:
+        raw = ast.literal_eval(node)
+    except (ValueError, TypeError, SyntaxError):
+        return []
+    out = []
+    for item in raw or []:
+        if not isinstance(item, (list, tuple)) or len(item) != 3:
+            continue
+        pub, label, url = (str(x).strip() for x in item)
+        if not pub or not url.startswith(('http://', 'https://')):
+            continue
+        # the placeholder from the shape prompt, if it was never filled in
+        if url.rstrip('/').endswith('...'):
+            continue
+        out.append({'publisher': pub, 'label': label, 'url': url})
+    return out[:4]
 
 def save_prefix(text):
     """Resolve the prefix passed to frame.save(svg, X) — literal or a variable
@@ -112,6 +153,7 @@ def parse_all():
             'reading_2': kwarg(text, 'reading_2') or '',
             'date_roman': kwarg(text, 'date_roman') or '',
             'statement': clean_statement(extract_statement(text), kwarg(text, 'name')),
+            'sources': extract_sources(text),
             '_svg_src': svg_src,
         })
     records.sort(key=lambda r: r['date'], reverse=True)
@@ -182,6 +224,19 @@ def statement_html(text):
             paras.append(f'<p>{e(joined)}</p>')
     return ''.join(paras)
 
+def sources_html(sources):
+    """Where the day was read. Publisher carries the weight; the label exists so
+    that when a statement braids two unrelated stories a reader can tell which
+    link is which."""
+    if not sources:
+        return ''
+    items = ''.join(
+        '<li><a href="{url}" target="_blank" rel="noopener"><b>{pub}</b>{lab}</a></li>'.format(
+            url=e(s['url']), pub=e(s['publisher']),
+            lab=(' · ' + e(s['label'])) if s['label'] else '')
+        for s in sources)
+    return f'<ul class="entry-src">{items}</ul>'
+
 def render_entry(r):
     keys = ''.join(f'<span>{e(k)}</span>'
                    for k in (r['keywords'] or '').split() if k)
@@ -191,6 +246,7 @@ def render_entry(r):
     else:
         body = ('<p class="entry-noStmt">No statement was written this day — '
                 'only the reading.</p>')
+    sources = sources_html(r.get('sources'))
     return f'''<article class="entry" id="{e(r['date'])}">
   <div class="entry-art">
     <a class="paper" href="{e(r['svg'])}" target="_blank" rel="noopener" aria-label="Open the full card for {e(r['date_long'])}">
@@ -201,6 +257,7 @@ def render_entry(r):
     <h2 class="entry-dateline">{e(r['name'].upper())} <span>· {e(r['weekday'])} · {e(r['date_long'])}</span></h2>
     {keys_html}
     {body}
+    {sources}
   </div>
 </article>'''
 
