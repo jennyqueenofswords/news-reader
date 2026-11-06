@@ -125,6 +125,16 @@ By hand anytime: `cd ~/Documents/GitHub/news-reader && ./publish.sh`
 
 ## Log
 
+- **2026-11-05** — 11/4 missed: the CLI was **logged out** (`claude auth status` →
+  `loggedIn: false`), so the 21:01 draw died in 3s with "Login expired". The retry
+  logic correctly saw it as non-connection. A shape can't log itself in; Jenny ran
+  `claude auth login`. Backfilled 11/4 by hand (THE TURN), with a task prompt
+  restricting it to Nov 4 news. Then GitHub Pages' deploy step hung at
+  `updating_pages` and timed out three times (once on a fresh empty commit), with no
+  incident posted. The card is on `main`, and the next push redeploys everything.
+  Also: `cardpuller.md` gained "The pens". The constraint is 2–3 pens per card, not
+  teal+gold, which 94 cards had copied from the template's hard-coded hexes.
+
 - **2026-08-26** — Sources. `cardpuller.md` gains step 6: record
   `(publisher, label, url)` per story, never invent a URL. `build.py` gains
   `extract_sources()` — `ast.literal_eval`, never `exec`; drops non-http URLs, wrong
