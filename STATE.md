@@ -125,6 +125,15 @@ By hand anytime: `cd ~/Documents/GitHub/news-reader && ./publish.sh`
 
 ## Log
 
+- **2026-11-10** — Gold restored. The 11/5 pens edit called teal+gold "a groove" and
+  every card since had dropped gold (blue/orange, garnet/slate, navy/brown). Jenny
+  noticed. Gold (the Gelly Roll) is now **home**: the default on nearly every card,
+  in any role, size or place, always plotted last. Leaving it out is allowed but must
+  be explained in the report. An intermediate version that required gold as the
+  "smallest, light-catching" layer was dropped the same day because it fixed gold's
+  meaning, not just its presence. The day picks one or two V5/V7 pens beneath. Also:
+  11/6 and 11/7 never drew because the Mac had no network at 9pm or after waking.
+
 - **2026-11-05** — 11/4 missed: the CLI was **logged out** (`claude auth status` →
   `loggedIn: false`), so the 21:01 draw died in 3s with "Login expired". The retry
   logic correctly saw it as non-connection. A shape can't log itself in; Jenny ran
