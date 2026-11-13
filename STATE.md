@@ -125,6 +125,17 @@ By hand anytime: `cd ~/Documents/GitHub/news-reader && ./publish.sh`
 
 ## Log
 
+- **2026-11-12** — Measured the whole deck (191 cards). The median line per card
+  dropped from 6.1 m to 2.1 m on 2026-06-29, the day the cards went public and the
+  statement became required. That was the only prompt change that day. Once prose
+  explained the day, the drawing stopped carrying it. Added one line to "What makes a
+  good card": the drawing carries the day on its own. No density rule, on purpose.
+  Then checked: statements themselves don't thin drawings. Before 6/29, cards with
+  one were richer, and statement length doesn't track line. The prime suspect is the
+  audience framing ("gets PUBLISHED beneath the card on the website"), so Jenny had
+  it removed from the statement step, template and sources section. Content rules
+  and never-invent-a-URL stay. Only the Publish step still mentions the site.
+
 - **2026-11-10** — Gold restored. The 11/5 pens edit called teal+gold "a groove" and
   every card since had dropped gold (blue/orange, garnet/slate, navy/brown). Jenny
   noticed. Gold (the Gelly Roll) is now **home**: the default on nearly every card,
